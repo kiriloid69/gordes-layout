@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Единая городская санитарная служба дезинфекции в Москве</title>
+        <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css" />
+        <link rel="stylesheet" href="node_modules/material-icons/iconfont/material-icons.css" />
+        <link rel="stylesheet" href="css/fonts.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/responsive.css" />
+        <link rel="stylesheet" href="css/preloader.css" />
+
+        <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+        <link rel="shortcut icon" href="favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="favicon/site.webmanifest" />
+    </head>
+    <body id="top">
+        <!-- Прелоадер -->
+        <div class="preloader">
+            <div class="preloader__logo">
+                <img src="images/logo.png" alt="logo" />
+            </div>
+        </div>
+        <!-- Фиксированная шапка для прокрутки -->
+        <header class="header-fixed">
+            <div class="container">
+                <nav class="nav">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="images/logo.png" alt="logo" class="logo__image" />
+                        </a>
+                    </div>
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Услуги</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Для бизнеса</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Цены</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Отзывы</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">О нас</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Контакты</a>
+                        </li>
+                        <li class="nav__item nav__item--callback">
+                            <button class="small-button callback-button callback-button--menu">Заказать обратный звонок</button>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="contacts">
+                    <a href="tel:88001018789" class="contacts__phone"><i class="material-icons">phone</i>8 (800) 101-87-89</a>
+                    <button class="small-button callback-button">Заказать обратный звонок</button>
+                    <button class="burger-menu" id="burgerMenuFixed" aria-label="Меню">
+                        <span class="burger-menu__line"></span>
+                        <span class="burger-menu__line"></span>
+                        <span class="burger-menu__line"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="page-wrapper">
+            <header class="header">
+                <div class="container">
+                    <nav class="nav">
+                        <div class="logo">
+                            <a href="#">
+                                <img src="images/logo.png" alt="logo" class="logo__image" />
+                            </a>
+                        </div>
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Услуги</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Для бизнеса</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Цены</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Отзывы</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">О нас</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Контакты</a>
+                            </li>
+                            <li class="nav__item nav__item--callback">
+                                <button class="small-button callback-button callback-button--menu">Заказать обратный звонок</button>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="contacts">
+                        <a href="tel:88001018789" class="contacts__phone"><i class="material-icons">phone</i>8 (800) 101-87-89</a>
+                        <button class="small-button callback-button">Заказать обратный звонок</button>
+                        <button class="burger-menu" id="burgerMenu" aria-label="Меню">
+                            <span class="burger-menu__line"></span>
+                            <span class="burger-menu__line"></span>
+                            <span class="burger-menu__line"></span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <div class="menu-overlay" id="menuOverlay"></div>
+            <main class="main">
+                <section class="hero">
+                    <div class="container">
+                        <h1 class="hero__title">
+                            <span class="blue-text"> Уничтожение муравьев</span> <br />
+                            с выездом в день обращения
+                        </h1>
+                        <p class="hero__description">Работаем с 2010 года. Бесплатная консультация.</p>
+                        <div class="hero__button__group">
+                            <button class="medium-button yellow-button hero__button">Государственная лицензия</button>
+                            <button class="medium-button hero__button">Узнать стоимость</button>
+                        </div>
+                        <div><a href="#" class="hero__link">Смотреть все документы</a></div>
+                        <div class="hero__advantages-wrapper">
+                            <div class="ant-bg">
+                                <img src="images/ant.png" alt="ant" />
+                            </div>
+                            <div class="hero__advantages">
+                                <div class="hero__advantage">
+                                    <div class="hero__advantage-image">
+                                        <img src="images/advantage-1.png" alt="advantage-1" />
+                                    </div>
+                                    <div class="hero__advantage-text">
+                                        <h3 class="hero__advantage-title">
+                                            Без вреда <br />
+                                            для детей и животных
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="hero__advantage">
+                                    <div class="hero__advantage-image">
+                                        <img src="images/advantage-2.png" alt="advantage-2" />
+                                    </div>
+                                    <div class="hero__advantage-text">
+                                        <h3 class="hero__advantage-title">
+                                            Одобрено <br />
+                                            Роспотребнадзором
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="hero__advantage">
+                                    <div class="hero__advantage-image">
+                                        <img src="images/advantage-3.png" alt="advantage-3" />
+                                    </div>
+                                    <div class="hero__advantage-text">
+                                        <h3 class="hero__advantage-title">
+                                            Гарантия <br />
+                                            по договору
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <section class="services">
+            <div class="container">
+                <h2 class="section__title">
+                    Мы уничтожаем более 25 видов <br />
+                    насекомых и грызунов
+                </h2>
+                <div class="section__subtitle">Весь спектр услуг в строгом соответствии с требованиями СанПиН</div>
+                <div class="cat-items">
+                    <div class="cat-item">
+                        <a href="#">
+                            <img class="cat-item__image" src="images/cockroachw1.png" alt="Уничтожение тараканов" />
+                            <span class="cat-item__button">Уничтожение тараканов</span>
+                        </a>
+                    </div>
+                    <div class="cat-item">
+                        <a href="#">
+                            <img class="cat-item__image" src="images/bedbugw1.png" alt="Уничтожение клопов" />
+                            <span class="cat-item__button">Уничтожение клопов</span>
+                        </a>
+                    </div>
+                    <div class="cat-item">
+                        <a href="#">
+                            <img class="cat-item__image" src="images/beetlew.png" alt="Уничтожение кожеедов" />
+                            <span class="cat-item__button">Уничтожение кожеедов</span>
+                        </a>
+                    </div>
+                    <div class="cat-item">
+                        <a href="#">
+                            <img class="cat-item__image" src="images/bugw2.png" alt="Уничтожение мукоедов" />
+                            <span class="cat-item__button">Уничтожение мукоедов</span>
+                        </a>
+                    </div>
+                    <div class="cat-item">
+                        <a href="#">
+                            <img class="cat-item__image" src="images/antw1.png" alt="Уничтожение муравьев" />
+                            <span class="cat-item__button">Уничтожение муравьев</span>
+                        </a>
+                    </div>
+                    <div class="cat-item">
+                        <a href="#">
+                            <img class="cat-item__image" src="images/cat-item-1.png" alt="Уничтожение комаров" />
+                            <span class="cat-item__button">Уничтожение комаров</span>
+                        </a>
+                    </div>
+                    <div class="cat-item">
+                        <a href="#">
+                            <img class="cat-item__image" src="images/mitew.png" alt="Уничтожение клещей" />
+                            <span class="cat-item__button">Уничтожение клещей</span>
+                        </a>
+                    </div>
+                    <div class="cat-item">
+                        <a href="#">
+                            <img class="cat-item__image" src="images/fleaw.png" alt="Уничтожение блох" />
+                            <span class="cat-item__button">Уничтожение блох</span>
+                        </a>
+                    </div>
+                    <div class="cat-item">
+                        <a href="#">
+                            <img class="cat-item__image" src="images/earwigw.png" alt="Уничтожение вредных насекомых" />
+                            <span class="cat-item__button">Уничтожение вредных насекомых</span>
+                        </a>
+                    </div>
+                    <div class="cat-item">
+                        <a href="#">
+                            <img class="cat-item__image" src="images/mothw.png" alt="Остальные виды насекомых" />
+                            <span class="cat-item__button">Остальные виды насекомых</span>
+                        </a>
+                    </div>
+                </div>
+                <button class="medium-button m-0-auto">Заказать обработку</button>
+                <div class="services__text">
+                    <p>
+                        <b>Муравьи</b> — это небольшие, но крайне назойливые насекомые, способные доставить массу неприятностей как в квартире, так и на огороде. Эти организованные существа создают целые муравьиные колонии, которые стремительно разрастаются, если вовремя не принять меры. Уничтожение
+                        муравьев требует комплексного подхода, так как одного лишь устранения взрослых особей недостаточно. Необходимо также разрушить их гнездо и нейтрализовать муравейник, чтобы предотвратить повторное появление.
+                    </p>
+
+                    <h3>Как избавиться от муравьев в квартире?</h3>
+                    <p>
+                        Процесс борьбы с муравьями начинается с тщательного выявления мест, где они построили свои гнезда или могут искать пищу. Это не только углы и щели в стенах, но также кухонные поверхности и шкафы, куда насекомые проникают в поисках еды. Муравьи могут прокладывать себе дорожки
+                        к источникам пищи, и важно найти их муравейник для полного уничтожения колонии. Для этого можно использовать лупу или фонарик, чтобы заглянуть в самые укромные уголки квартиры.
+                    </p>
+
+                    <h3>Эффективные методы борьбы</h3>
+                    <p>
+                        Одним из проверенных средств является борная кислота. Ее можно использовать в качестве порошка или для приготовления раствора. Для этого нужно смешать борную кислоту с сахаром и водой, чтобы создать приманку, которая будет привлекать муравьев. После поедания такой приманки
+                        насекомые унесут яд в свое гнездо, что приведет к гибели всей колонии.
+                    </p>
+                    <p>
+                        Другим эффективным средством является уксус. Его запах отпугивает муравьев, а обработка раствором уксуса поможет избавиться от их следов и предотвратить повторное появление. Для приготовления раствора уксуса с водой можно использовать соотношение 1:1 и обрабатывать
+                        поверхности, по которым перемещаются муравьи.
+                    </p>
+
+                    <h3>Средства для обработки</h3>
+                    <p>Для борьбы с муравьями существует множество профессиональных и народных средств. К ним относятся:</p>
+                    <ul>
+                        <li><b>Инсектициды:</b> профессиональные средства, которые бывают в виде спреев, порошков или растворов для обработки поверхностей. Они действуют быстро и эффективно, устраняя не только взрослых муравьев, но и их яйца и личинки.</li>
+                        <li><b>Приманки:</b> готовые смеси, содержащие яд, который привлекает муравьев. Это удобно, так как не нужно готовить ничего самостоятельно.</li>
+                        <li><b>Народные средства:</b> такие как корица, лавровый лист или кофе, которые могут отпугивать муравьев благодаря своему запаху.</li>
+                    </ul>
+                    <p>Важно помнить, что не все препараты одинаково эффективны или безопасны для людей и домашних животных, поэтому следует внимательно читать инструкции перед использованием.</p>
+
+                    <h3>Почему важно доверить выбор средства профессионалам?</h3>
+                    <p>При борьбе с муравьями часто возникает необходимость в использовании профессиональных средств. Доверить этот выбор стоит специалистам по нескольким причинам:</p>
+                    <ul>
+                        <li><b>Правильный подбор препаратов:</b> опытные дезинсекторы подбирают средства в зависимости от степени заражения, типа помещения и наличия домашних животных.</li>
+                        <li><b>Безопасность:</b> профессионалы используют только сертифицированные и проверенные средства, которые безопасны для людей и домашних животных.</li>
+                        <li><b>Эффективность:</b> средства, применяемые профессионалами, обладают высокой эффективностью и способны уничтожить все стадии развития муравьев — от яиц до взрослых особей.</li>
+                    </ul>
+
+                    <h3>Профилактика повторного появления муравьев</h3>
+                    <p>Профилактика является важным элементом борьбы с муравьями. Даже после обработки помещений нужно придерживаться ряда рекомендаций, чтобы предотвратить повторное заражение:</p>
+                    <ul>
+                        <li><b>Регулярно проводите влажную уборку:</b> используйте средства против муравьев во время уборки.</li>
+                        <li><b>Пылесосьте</b> ковры, мебель и полы, чтобы удалить яйца и личинки, которые могли остаться после обработки.</li>
+                        <li><b>Следите за гигиеной:</b> убирайте крошки и остатки пищи, которые могут привлекать муравьев.</li>
+                    </ul>
+
+                    <h3>Защита огорода от муравьев</h3>
+                    <p>
+                        Муравьи могут стать серьезной проблемой не только в квартире, но и на огороде. Они разрушают корни растений, нарушают плодородие почвы и разносят тлю, что может нанести вред урожаю. Для борьбы с муравьями на огороде также можно использовать борную кислоту и уксус, применяя их
+                        как средства для обработки почвы вокруг растений. Кроме того, можно посеять растения, которые отпугивают муравьев, такие как мята или базилик.
+                    </p>
+                    <p><b>Советы по защите огорода:</b></p>
+                    <ul>
+                        <li><b>Регулярно проверяйте растения:</b> на наличие муравьев, особенно в период цветения.</li>
+                        <li><b>Используйте натуральные приманки:</b> такие как борная кислота или уксус, чтобы предотвратить размножение колонии.</li>
+                        <li><b>Применяйте инсектициды:</b> в случае серьезного заражения для защиты вашего участка от насекомых.</li>
+                    </ul>
+                    <p>
+                        Избавление от муравьев — это важный шаг на пути к обеспечению комфорта в вашем доме и защите урожая на огороде. Использование таких средств, как борная кислота, растворы уксуса и профессиональные инсектициды, поможет не только избавиться от существующих муравьиных колоний, но
+                        и предотвратить их возвращение. Понимание поведения и привычек этих насекомых, а также применение эффективных методов борьбы — ключ к созданию комфортной и безопасной среды как в квартире, так и на приусадебном участке.
+                    </p>
+                </div>
+                <button class="services__read-more" type="button">
+                    <span>Читать далее</span>
+                    <i class="material-icons">expand_more</i>
+                </button>
+                <h2 class="section__title">
+                    А также мы оказываем <br />
+                    и другие услуги
+                </h2>
+                <div class="cat-items jc-c">
+                    <div class="cat-item light-plate">
+                        <a href="#">
+                            <img class="cat-item__image" src="images/cat-item-2.png" alt="Дератизация" />
+                            <span class="cat-item__button">Дератизация</span>
+                        </a>
+                    </div>
+                    <div class="cat-item light-plate">
+                        <a href="#">
+                            <img class="cat-item__image" src="images/cat-item-3.png" alt="Дезинфекция" />
+                            <span class="cat-item__button">Дезинфекция</span>
+                        </a>
+                    </div>
+                </div>
+                <button class="medium-button m-0-auto">Заказать обработку</button>
+            </div>
+        </section>
+
+        <section class="three-services">
+            <div class="container">
+                <h2 class="section__title">Дезинсекция от А до Я — ответы на ваши вопросы</h2>
+                <div class="three-services__content">
+                    <div class="three-services__column three-services__column--left">
+                        <div class="three-services__item">
+                            <div class="three-services__content-text">
+                                <h3 class="three-services__title">Что включает в себя дезинсекция?</h3>
+                                <p class="three-services__text">Дезинсекция охватывает мероприятия по уничтожению и предотвращению появления насекомых-вредителей.</p>
+                            </div>
+                        </div>
+                        <div class="three-services__item">
+                            <div class="three-services__content-text">
+                                <h3 class="three-services__title">Какие средства используете?</h3>
+                                <p class="three-services__text">Используем только сертифицированные и безопасные средства для дезинфекции. Все продукты соответствуют требованиям санитарных норм.</p>
+                            </div>
+                        </div>
+                        <div class="three-services__item">
+                            <div class="three-services__content-text">
+                                <h3 class="three-services__title">Какой опыт имеют ваши специалисты?</h3>
+                                <p class="three-services__text">Наши специалисты имеют многолетний опыт и постоянно проходят обучение и сертификацию.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="three-services__column three-services__column--center">
+                        <img src="images/thumbnail-white.png" alt="Основное изображение" class="three-services__main-image">
+                    </div>
+                    <div class="three-services__column three-services__column--right">
+                        <div class="three-services__item">
+                            <div class="three-services__content-text">
+                                <h3 class="three-services__title">Уйти из помещения?</h3>
+                                <p class="three-services__text">Пребывание в помещении во время обработки не допускается. Возвращаться можно после полного высыхания поверхности.</p>
+                            </div>
+                        </div>
+                        <div class="three-services__item">
+                            <div class="three-services__content-text">
+                                <h3 class="three-services__title">Насколько безопасно?</h3>
+                                <p class="three-services__text">Абсолютно безопасно. Перед обработкой мы информируем клиентов обо всех этапах процесса и предоставляем рекомендации.</p>
+                            </div>
+                        </div>
+                        <div class="three-services__item">
+                            <div class="three-services__content-text">
+                                <h3 class="three-services__title">Делаете ли вы срочную обработку?</h3>
+                                <p class="three-services__text">Наши специалисты готовы выехать на объект в кратчайшие сроки, чтобы решить проблему</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="medium-button m-0-auto">Получить консультацию</button>
+            </div>
+        </section>
+
+        <section class="garancy mb-0">
+            <div class="container">
+                <h2 class="section__title">Несем юридическую ответственность за вашу безопасность</h2>
+                <p class="section__subtitle">Работаем по договору, используем только импортные сертифицированные препараты</p>
+                <div class="garancy__grid">
+                    <div class="garancy__item">
+                        <img src="images/chemicals.png" alt="Препараты" class="garancy__icon" />
+                        <p class="garancy__text">Самые эффективные современные препараты</p>
+                    </div>
+                    <div class="garancy__item">
+                        <img src="images/warranty.png" alt="Гарантия" class="garancy__icon" />
+                        <p class="garancy__text">Даем гарантию результата по договору</p>
+                    </div>
+                    <div class="garancy__item">
+                        <img src="images/documents.png" alt="Документы" class="garancy__icon" />
+                        <p class="garancy__text">Предоставляем все закрывающие документы</p>
+                    </div>
+                    <div class="garancy__item">
+                        <img src="images/anonymous-exterminator.png" alt="Анонимность" class="garancy__icon" />
+                        <p class="garancy__text">Работаем анонимно, соседи не узнают</p>
+                    </div>
+                    <div class="garancy__item">
+                        <img src="images/baby.png" alt="Безопасность" class="garancy__icon" />
+                        <p class="garancy__text">Без вреда для детей и животных</p>
+                    </div>
+                    <div class="garancy__item">
+                        <img src="images/time.png" alt="Время" class="garancy__icon" />
+                        <p class="garancy__text">Выезжаем в любое удобное для клиента время</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="order-specialist mb-0 mt-0">
+            <div class="container">
+                <div class="order-specialist__content">
+                    <div class="order-specialist__image-wrapper"></div>
+                    <div class="order-specialist__form-wrapper">
+                        <div class="order-specialist__title">Вызвать лицензированного специалиста. <b>Приедет за 90 минут</b></div>
+                        <form class="order-specialist__form" action="#" method="post">
+                            <div class="order-specialist__fields">
+                                <input type="text" name="name" class="order-specialist__input" placeholder="Ваше имя" required />
+                                <input type="tel" name="phone" class="order-specialist__input" placeholder="Ваш номер телефона" required />
+                                <button type="submit" class="order-specialist__button" disabled>Вызвать специалиста</button>
+                            </div>
+                            <label class="order-specialist__checkbox-label">
+                                <input type="checkbox" name="consent" class="order-specialist__checkbox" checked required />
+                                <span class="order-specialist__checkbox-text"> Отправляя заявку вы подтверждаете передачу персональных данных и даете свое согласие на обработку и использование оператором ваших персональных данных. </span>
+                            </label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="price" id="price">
+            <div class="container">
+                <h2 class="section__title">Стоимость работы</h2>
+                <div class="price-table">
+                    <div class="price-table__tabs">
+                        <ul class="price-table__table-list">
+                            <li class="price-table__table-title active" data-tab="0">Уничтожение насекомых</li>
+                            <li class="price-table__table-title" data-tab="1">Для коммерческих помещений и ресторанов</li>
+                        </ul>
+                    </div>
+                    <div class="price-table__content">
+                        <div class="price-table__content-item active" data-content="0">
+                            <div class="price-table__section">
+                                <h3 class="price-table__section-title">В квартире</h3>
+                                <div class="price-table__row">
+                                    <div class="price-table__row-title">1-комнатная квартира:</div>
+                                    <div class="price-table__row-prices">
+                                        <span class="price-table__price price-table__price--sale">2990 руб.</span>
+                                        <span class="price-table__price price-table__price--old">4900 руб.</span>
+                                    </div>
+                                </div>
+                                <div class="price-table__row">
+                                    <div class="price-table__row-title">2-комнатная квартира:</div>
+                                    <div class="price-table__row-prices">
+                                        <span class="price-table__price price-table__price--sale">3490 руб.</span>
+                                        <span class="price-table__price price-table__price--old">5990 руб.</span>
+                                    </div>
+                                </div>
+                                <div class="price-table__row">
+                                    <div class="price-table__row-title">3-комнатная квартира:</div>
+                                    <div class="price-table__row-prices">
+                                        <span class="price-table__price price-table__price--sale">3990 руб.</span>
+                                        <span class="price-table__price price-table__price--old">6490 руб.</span>
+                                    </div>
+                                </div>
+                                <div class="price-table__row">
+                                    <div class="price-table__row-title">4-комнатная квартира:</div>
+                                    <div class="price-table__row-prices">
+                                        <span class="price-table__price price-table__price--sale">4490 руб.</span>
+                                        <span class="price-table__price price-table__price--old">7990 руб.</span>
+                                    </div>
+                                </div>
+                                <div class="price-table__row">
+                                    <div class="price-table__row-title">5-комнатная квартира:</div>
+                                    <div class="price-table__row-prices">
+                                        <span class="price-table__price price-table__price--sale">4990 руб.</span>
+                                        <span class="price-table__price price-table__price--old">8490 руб.</span>
+                                    </div>
+                                </div>
+                                <div class="price-table__row">
+                                    <div class="price-table__row-title">Вагончик-бытовка:</div>
+                                    <div class="price-table__row-prices">
+                                        <span class="price-table__price price-table__price--sale">от 2000 руб.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-table__section">
+                                <h3 class="price-table__section-title">На участке</h3>
+                                <div class="price-table__row">
+                                    <div class="price-table__row-title">До 10 соток:</div>
+                                    <div class="price-table__row-prices">
+                                        <span class="price-table__price price-table__price--sale">от 500 руб/сотка</span>
+                                        <span class="price-table__price price-table__price--old">600 руб/сотка</span>
+                                    </div>
+                                </div>
+                                <div class="price-table__row">
+                                    <div class="price-table__row-title">До 15 соток:</div>
+                                    <div class="price-table__row-prices">
+                                        <span class="price-table__price price-table__price--sale">от 450 руб/сотка</span>
+                                        <span class="price-table__price price-table__price--old">550 руб/сотка</span>
+                                    </div>
+                                </div>
+                                <div class="price-table__row">
+                                    <div class="price-table__row-title">До 30 соток:</div>
+                                    <div class="price-table__row-prices">
+                                        <span class="price-table__price price-table__price--sale">от 400 руб/сотка</span>
+                                        <span class="price-table__price price-table__price--old">500 руб/сотка</span>
+                                    </div>
+                                </div>
+                                <div class="price-table__row">
+                                    <div class="price-table__row-title">До 50 соток:</div>
+                                    <div class="price-table__row-prices">
+                                        <span class="price-table__price price-table__price--sale">от 380 руб/сотка</span>
+                                        <span class="price-table__price price-table__price--old">480 руб/сотка</span>
+                                    </div>
+                                </div>
+                                <div class="price-table__row">
+                                    <div class="price-table__row-title">До 80 соток:</div>
+                                    <div class="price-table__row-prices">
+                                        <span class="price-table__price price-table__price--sale">от 350 руб/сотка</span>
+                                        <span class="price-table__price price-table__price--old">450 руб/сотка</span>
+                                    </div>
+                                </div>
+                                <div class="price-table__row">
+                                    <div class="price-table__row-title">До 100 соток:</div>
+                                    <div class="price-table__row-prices">
+                                        <span class="price-table__price price-table__price--sale">300 руб/сотка</span>
+                                        <span class="price-table__price price-table__price--old">400 руб/сотка</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="price-table__note">*Чтобы получить точный расчёт, свяжитесь с нами. Мы предоставим вам бесплатную консультацию.</p>
+                        </div>
+                        <div class="price-table__content-item" data-content="1">
+                            <div class="price-table__section">
+                                <h3 class="price-table__section-title">Уничтожение насекомых</h3>
+                                <div class="price-table__row">
+                                    <div class="price-table__row-title">до 50 м2:</div>
+                                    <div class="price-table__row-prices">
+                                        <span class="price-table__price price-table__price--sale">120 руб. за м2</span>
+                                    </div>
+                                </div>
+                                <div class="price-table__row">
+                                    <div class="price-table__row-title">до 100 м2:</div>
+                                    <div class="price-table__row-prices">
+                                        <span class="price-table__price price-table__price--sale">100 руб. за м2</span>
+                                    </div>
+                                </div>
+                                <div class="price-table__row">
+                                    <div class="price-table__row-title">до 150 м2:</div>
+                                    <div class="price-table__row-prices">
+                                        <span class="price-table__price price-table__price--sale">90 руб. за м2</span>
+                                    </div>
+                                </div>
+                                <div class="price-table__row">
+                                    <div class="price-table__row-title">до 200 м2:</div>
+                                    <div class="price-table__row-prices">
+                                        <span class="price-table__price price-table__price--sale">80 руб. за м2</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="price-table__note">*Чтобы получить точный расчёт, свяжитесь с нами. Мы предоставим вам бесплатную консультацию.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="medium-button m-0-auto mt-40">Заказать обработку</button>
+            </div>
+        </section>
+
+        <section class="risks">
+            <div class="container">
+                <h2 class="section__title">Какие есть риски, когда боретесь с вредителями самостоятельно или откладываете решение проблемы?</h2>
+                <div class="risks__list">
+                    <div class="risks__item">
+                        <div class="risks__item-img">
+                            <img src="images/sick.png" alt="Риск заболеть" />
+                        </div>
+                        <div class="risks__item-content">
+                            <p class="risks__item-title">РИСК ЗАБОЛЕТЬ</p>
+                            <p class="risks__item-text">Многие вредители являются переносчиками заболеваний и инфекций</p>
+                        </div>
+                    </div>
+                    <div class="risks__item">
+                        <div class="risks__item-img">
+                            <img src="images/allergy.png" alt="Аллергия" />
+                        </div>
+                        <div class="risks__item-content">
+                            <p class="risks__item-title">АЛЛЕРГИЯ</p>
+                            <p class="risks__item-text">Вместе с вредителями появляется аллергия. Особенно это опасно для детей и пенсионеров</p>
+                        </div>
+                    </div>
+                    <div class="risks__item">
+                        <div class="risks__item-img">
+                            <img src="images/broken-sofa-2.png" alt="Порча имущества" />
+                        </div>
+                        <div class="risks__item-content">
+                            <p class="risks__item-title">ПОРЧА ИМУЩЕСТВА</p>
+                            <p class="risks__item-text">Грызуны и другие вредители медленно портят ваше имущество</p>
+                        </div>
+                    </div>
+                    <div class="risks__item">
+                        <div class="risks__item-img">
+                            <img src="images/less-time-2.png" alt="Откладывание проблемы" />
+                        </div>
+                        <div class="risks__item-content">
+                            <p class="risks__item-title">ОТКЛАДЫВАНИЕ ПРОБЛЕМЫ</p>
+                            <p class="risks__item-text">Откладывая обработку, Вы находитесь под угрозой каждый день</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="object-processing">
+            <div class="container">
+                <h2 class="section__title">Обрабатываем объекты любой сложности</h2>
+                <div class="object-items">
+                    <div class="object-item light-plate">
+                        <a href="#">
+                            <img class="object-item__image" src="images/kvartiry.png" alt="Квартиры" />
+                            <span class="object-item__button">Квартиры</span>
+                        </a>
+                    </div>
+                    <div class="object-item light-plate">
+                        <a href="#">
+                            <img class="object-item__image" src="images/ofisy.png" alt="Офисы" />
+                            <span class="object-item__button">Офисы</span>
+                        </a>
+                    </div>
+                    <div class="object-item light-plate">
+                        <a href="#">
+                            <img class="object-item__image" src="images/magaziny.png" alt="Магазины" />
+                            <span class="object-item__button">Магазины</span>
+                        </a>
+                    </div>
+                    <div class="object-item light-plate">
+                        <a href="#">
+                            <img class="object-item__image" src="images/gostiniczy.png" alt="Гостиницы" />
+                            <span class="object-item__button">Гостиницы</span>
+                        </a>
+                    </div>
+                    <div class="object-item light-plate">
+                        <a href="#">
+                            <img class="object-item__image" src="images/promyshlennye-obekty.png" alt="Промышленные объекты" />
+                            <span class="object-item__button">Промышленные объекты</span>
+                        </a>
+                    </div>
+                    <div class="object-item light-plate">
+                        <a href="#">
+                            <img class="object-item__image" src="images/obekty-transporta.png" alt="Объекты транспорта" />
+                            <span class="object-item__button">Объекты транспорта</span>
+                        </a>
+                    </div>
+                    <div class="object-item light-plate">
+                        <a href="#">
+                            <img class="object-item__image" src="images/med-uchrezhdeniya.png" alt="Медицинские учреждения" />
+                            <span class="object-item__button">Медицинские учреждения</span>
+                        </a>
+                    </div>
+                    <div class="object-item light-plate">
+                        <a href="#">
+                            <img class="object-item__image" src="images/prochie-obekty.png" alt="Прочие объекты" />
+                            <span class="object-item__button">Прочие объекты</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="legal-entities">
+            <div class="container">
+                <h2 class="section__title">Мы работаем с юридическими лицами</h2>
+                <div class="legal-entities__content">
+                    <div class="legal-entities__content__side">
+                        <img src="images/documents-legal.png" alt="Юридическое лицо" />
+                    </div>
+                    <div class="legal-entities__content__side">
+                        <ul class="legal-entities__content__list">
+                            <li class="legal-entities__content__item">Предприятия общественного питания и продуктовые магазины;</li>
+                            <li class="legal-entities__content__item">Детские сады, школы, центры детского развития и досуга;</li>
+                            <li class="legal-entities__content__item">Складские, промышленные и заводские помещения, зернохранилища;</li>
+                            <li class="legal-entities__content__item">Предприятия коммунальных услуг, коттеджные поселки, садовые товарищества, парковые зоны;</li>
+                            <li class="legal-entities__content__item">Торговые, офисные и бизнес-центры, салоны красоты, автомойки и автозаправки;</li>
+                            <li class="legal-entities__content__item">Общежития и бытовки.</li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="medium-button m-0-auto mt-40">Заказать консультацию</button>
+            </div>
+        </section>
+
+        <section class="reviews">
+            <div class="container">
+                <h2 class="section__title">Отзывы наших клиентов</h2>
+
+                <div class="slider-container">
+                    <div class="container">
+                        <!-- Десктопный слайдер -->
+                        <div class="slider reviews__slider reviews__slider--desktop">
+                            <div class="slider__wrapper">
+                                <div class="slider__track">
+                                    <div class="slider__item">
+                                        <img src="images/reviews/rew-1.png" alt="Отзыв 1" />
+                                    </div>
+                                    <div class="slider__item">
+                                        <img src="images/reviews/rew-2.png" alt="Отзыв 2" />
+                                    </div>
+                                    <div class="slider__item">
+                                        <img src="images/reviews/rew-3.png" alt="Отзыв 3" />
+                                    </div>
+                                    <div class="slider__item">
+                                        <img src="images/reviews/rew-4.png" alt="Отзыв 4" />
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="slider__arrow slider__arrow--prev" aria-label="Предыдущий слайд">
+                                <i class="material-icons">chevron_left</i>
+                            </button>
+                            <button class="slider__arrow slider__arrow--next" aria-label="Следующий слайд">
+                                <i class="material-icons">chevron_right</i>
+                            </button>
+                            <div class="slider__dots"></div>
+                        </div>
+                        <!-- Мобильный слайдер -->
+                        <div class="slider reviews__slider reviews__slider--mobile">
+                            <div class="slider__wrapper">
+                                <div class="slider__track">
+                                    <div class="slider__item">
+                                        <img data-src="images/reviews/mobile/rewm-1.jpg" alt="Отзыв 1" />
+                                    </div>
+                                    <div class="slider__item">
+                                        <img data-src="images/reviews/mobile/rewm-2.jpg" alt="Отзыв 2" />
+                                    </div>
+                                    <div class="slider__item">
+                                        <img data-src="images/reviews/mobile/rewm-3.jpg" alt="Отзыв 3" />
+                                    </div>
+                                    <div class="slider__item">
+                                        <img data-src="images/reviews/mobile/rewm-4.jpg" alt="Отзыв 4" />
+                                    </div>
+                                    <div class="slider__item">
+                                        <img data-src="images/reviews/mobile/rewm-5.jpg" alt="Отзыв 5" />
+                                    </div>
+                                    <div class="slider__item">
+                                        <img data-src="images/reviews/mobile/rewm-6.jpg" alt="Отзыв 6" />
+                                    </div>
+                                    <div class="slider__item">
+                                        <img data-src="images/reviews/mobile/rewm-7.jpg" alt="Отзыв 7" />
+                                    </div>
+                                    <div class="slider__item">
+                                        <img data-src="images/reviews/mobile/rewm-8.jpg" alt="Отзыв 8" />
+                                    </div>
+                                    <div class="slider__item">
+                                        <img data-src="images/reviews/mobile/rewm-9.jpg" alt="Отзыв 9" />
+                                    </div>
+                                    <div class="slider__item">
+                                        <img data-src="images/reviews/mobile/rewm-10.jpg" alt="Отзыв 10" />
+                                    </div>
+                                    <div class="slider__item">
+                                        <img data-src="images/reviews/mobile/rewm-11.jpg" alt="Отзыв 11" />
+                                    </div>
+                                    <div class="slider__item">
+                                        <img data-src="images/reviews/mobile/rewm-12.jpg" alt="Отзыв 12" />
+                                    </div>
+                                    <div class="slider__item">
+                                        <img data-src="images/reviews/mobile/rewm-13.jpg" alt="Отзыв 13" />
+                                    </div>
+                                    <div class="slider__item">
+                                        <img data-src="images/reviews/mobile/rewm-14.jpg" alt="Отзыв 14" />
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="slider__arrow slider__arrow--prev" aria-label="Предыдущий слайд">
+                                <i class="material-icons">chevron_left</i>
+                            </button>
+                            <button class="slider__arrow slider__arrow--next" aria-label="Следующий слайд">
+                                <i class="material-icons">chevron_right</i>
+                            </button>
+                            <div class="slider__dots"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Виджет отзывов от MyReviews по нужде можно заменить на свой -->
+
+                <div style="display: flex; justify-content: center; margin-top: 20px; border-radius: 20px">
+                    <iframe title="Виджет с отзывами «Карусель» от MyReviews" style="width: 100%; height: 100%; max-width: 1170px; border: none; outline: none; padding: 0; margin: 0" id="myReviews__block-widget"> </iframe>
+                </div>
+                <script src="https://myreviews.dev/widget/dist/index.js" defer></script>
+                <script>
+                    (function () {
+                        var myReviewsInit = function () {
+                            new window.myReviews.BlockWidget({
+                                uuid: "a3c2caa3-2a4c-4b72-b9ce-ed1dc9cd206c",
+                                name: "g1171682",
+                                additionalFrame: "none",
+                                lang: "ru",
+                                widgetId: "2",
+                            }).init();
+                        };
+                        if (document.readyState === "loading") {
+                            document.addEventListener("DOMContentLoaded", function () {
+                                myReviewsInit();
+                            });
+                        } else {
+                            myReviewsInit();
+                        }
+                    })();
+                </script>
+
+                <!-- / Виджет отзывов от MyReviews -->
+            </div>
+        </section>
+
+        <section class="licenses" id="licenses">
+            <div class="container">
+                <h2 class="section__title mt-0">Наши лицензии и сертификаты</h2>
+                <div class="licenses__main">
+                    <div class="licenses__image-wrapper">
+                        <img src="images/certificates/main-license.png" alt="Государственная лицензия" class="licenses__image" />
+                    </div>
+                    <div class="licenses__content">
+                        <h3 class="licenses__title">Государственная лицензия на осуществление деятельности в области оказания услуг по дезинфекции, дезинсекции, дератизации</h3>
+                        <p class="licenses__description">Выдана Управлением Федеральной службы по надзору в сфере защиты прав потребителей и благополучия человека по Липецкой области</p>
+                        <a href="https://fp.rospotrebnadzor.ru/licen/?oper=search&numb_history=&numb=+%E2%84%96+48.01.01.003.%D0%9B.000007.10.24&firmget_name=&ogrn_inn_nza=" target="_blank" rel="noopener noreferrer" class="licenses__link">Смотреть документ на сайте Роспотребнадзор</a>
+                    </div>
+                </div>
+                <div class="slider-container">
+                    <!-- Десктопный слайдер сертификатов -->
+                    <div class="slider licenses__slider licenses__slider--desktop">
+                        <div class="slider__wrapper">
+                            <div class="slider__track">
+                                <div class="slider__item">
+                                    <img src="images/certificates/cert-1.jpg" alt="Лицензия 1" />
+                                </div>
+                                <div class="slider__item">
+                                    <img src="images/certificates/cert-2.jpeg" alt="Лицензия 2" />
+                                </div>
+                                <div class="slider__item">
+                                    <img src="images/certificates/cert-3.jpeg" alt="Лицензия 3" />
+                                </div>
+                                <div class="slider__item">
+                                    <img src="images/certificates/cert-4.jpeg" alt="Лицензия 4" />
+                                </div>
+                                <div class="slider__item">
+                                    <img src="images/certificates/cert-5.jpeg" alt="Лицензия 5" />
+                                </div>
+                                <div class="slider__item">
+                                    <img src="images/certificates/cert-6.png" alt="Лицензия 6" />
+                                </div>
+                            </div>
+                        </div>
+                        <button class="slider__arrow slider__arrow--prev" aria-label="Предыдущий слайд">
+                            <i class="material-icons">chevron_left</i>
+                        </button>
+                        <button class="slider__arrow slider__arrow--next" aria-label="Следующий слайд">
+                            <i class="material-icons">chevron_right</i>
+                        </button>
+                        <div class="slider__dots"></div>
+                    </div>
+                    <!-- Мобильный слайдер сертификатов -->
+                    <div class="slider licenses__slider licenses__slider--mobile">
+                        <div class="slider__wrapper">
+                            <div class="slider__track">
+                                <div class="slider__item">
+                                    <img data-src="images/certificates/mobile/certm-1.jpeg" alt="Лицензия 1" />
+                                </div>
+                                <div class="slider__item">
+                                    <img data-src="images/certificates/mobile/certm-2.jpeg" alt="Лицензия 2" />
+                                </div>
+                                <div class="slider__item">
+                                    <img data-src="images/certificates/mobile/certm-3.jpg" alt="Лицензия 3" />
+                                </div>
+                                <div class="slider__item">
+                                    <img data-src="images/certificates/mobile/certm-4.jpeg" alt="Лицензия 4" />
+                                </div>
+                                <div class="slider__item">
+                                    <img data-src="images/certificates/mobile/certm-5.jpeg" alt="Лицензия 5" />
+                                </div>
+                                <div class="slider__item">
+                                    <img data-src="images/certificates/mobile/certm-6.jpg" alt="Лицензия 6" />
+                                </div>
+                                <div class="slider__item">
+                                    <img data-src="images/certificates/mobile/certm-7.jpg" alt="Лицензия 7" />
+                                </div>
+                                <div class="slider__item">
+                                    <img data-src="images/certificates/mobile/certm-8.jpg" alt="Лицензия 8" />
+                                </div>
+                                <div class="slider__item">
+                                    <img data-src="images/certificates/mobile/certm-9.jpg" alt="Лицензия 9" />
+                                </div>
+                            </div>
+                        </div>
+                        <button class="slider__arrow slider__arrow--prev" aria-label="Предыдущий слайд">
+                            <i class="material-icons">chevron_left</i>
+                        </button>
+                        <button class="slider__arrow slider__arrow--next" aria-label="Следующий слайд">
+                            <i class="material-icons">chevron_right</i>
+                        </button>
+                        <div class="slider__dots"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="partners">
+            <div class="container">
+                <h2 class="section__title">Наши партнеры</h2>
+                <div class="partners__list">
+                    <div class="partners__item">
+                        <img src="images/partners/cherk.jpg" alt="Черкизово" />
+                    </div>
+                    <div class="partners__item">
+                        <img src="images/partners/bk.jpg" alt="Бургер Кинг" />
+                    </div>
+                    <div class="partners__item">
+                        <img src="images/partners/lavka.png" alt="Сыроварня Лавка" />
+                    </div>
+                    <div class="partners__item">
+                        <img src="images/partners/mac.jpg" alt="Вкусно и точка" />
+                    </div>
+                    <div class="partners__item">
+                        <img src="images/partners/tanuki.png" alt="Тануки" />
+                    </div>
+                    <div class="partners__item">
+                        <img src="images/partners/lukoil.jpg" alt="Лукойл" />
+                    </div>
+                    <div class="partners__item">
+                        <img src="images/partners/samolet.jpg" alt="Самолет Девелопмент" />
+                    </div>
+                    <div class="partners__item">
+                        <img src="images/partners/dodo.jpg" alt="Додо Пицца" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer mt-0">
+            <div class="container">
+                <div class="footer__content">
+                    <div class="footer__section footer__section--contacts">
+                        <div class="footer__contact-item footer__contact-item--vertical">
+                            <span class="footer__label">E-mail:</span>
+                            <a href="mailto:info@gordes1.ru" class="footer__link">info@gordes1.ru</a>
+                        </div>
+                        <div class="footer__contact-item footer__contact-item--vertical">
+                            <span class="footer__label">Телефон:</span>
+                            <div class="footer__phones">
+                                <a href="tel:+78001018789" class="footer__link">+7 (800) 101-87-89</a>
+                                <a href="tel:+79959046080" class="footer__link">+7 (995) 904-60-80</a>
+                            </div>
+                            <span class="footer__note">— Отделение по работе с клиентами</span>
+                        </div>
+                        <div class="footer__contact-item footer__contact-item--vertical">
+                            <span class="footer__label">WhatsApp:</span>
+                            <a href="https://wa.me/79933536080" class="footer__link">+7 (993) 353-60-80</a>
+                        </div>
+                        <a href="downloads/politika-obrabotki-dannyj.docx" target="_blank" rel="noopener noreferrer" class="footer__policy">Просмотр политики обработки данных</a>
+                    </div>
+                    <div class="footer__section footer__section--nav">
+                        <nav class="footer__nav">
+                            <a href="#" class="footer__nav-link">Цены</a>
+                            <a href="#" class="footer__nav-link">Юр. лицам</a>
+                            <a href="#" class="footer__nav-link">Услуги</a>
+                            <a href="#" class="footer__nav-link">Статьи</a>
+                            <a href="#" class="footer__nav-link">Отзывы</a>
+                            <a href="#" class="footer__nav-link">Контакты</a>
+                        </nav>
+                        <!-- <a href="#" class="footer__city-link">Выберите город</a> -->
+                    </div>
+                    <div class="footer__section footer__section--top">
+                        <a href="#top" class="footer__top-link">
+                            <span>Наверх</span>
+                            <i class="material-icons">arrow_upward</i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__company">ЕДИНАЯ СЛУЖБА ДЕЗИНФЕКЦИИ "ЗДОРОВЫЙ ГОРОД"</div>
+                    <div class="footer__legal">
+                        <p>ИП Ермаков Даниил Сергеевич. ИНН 480703021969, ОГРНИП 322366800095049</p>
+                        <p>Лицензия № 48.01.01.003.Л.000007.10.24</p>
+                    </div>
+                </div>
+            </div>
+            <a href="https://wa.me/79933536080" class="footer__whatsapp" target="_blank" rel="noopener noreferrer">
+                <span>Напишите нам в WhatsApp</span>
+                <img src="images/icons/wa.svg" alt="WhatsApp" class="footer__whatsapp-icon" />
+            </a>
+        </footer>
+
+        <!-- Модальное окно формы -->
+        <div class="modal-overlay" id="orderModal">
+            <div class="modal">
+                <button class="modal__close" aria-label="Закрыть">
+                    <i class="material-icons">close</i>
+                </button>
+                <h2 class="modal__title">Оставить заявку</h2>
+                <p class="modal__description">Оставьте номер телефона и мы свяжемся с вами в ближайшее время для уточнения деталей вашего заказа и проконсультируем по всем вопросам</p>
+                <form class="modal__form" action="#" method="post">
+                    <div class="modal__fields">
+                        <input type="text" name="name" class="modal__input" id="modalName" placeholder="Ваше имя" required />
+                        <input type="tel" name="phone" class="modal__input" id="modalPhone" placeholder="Введите ваш телефон" required />
+                        <button type="submit" class="modal__button" disabled>Избавиться от вредителей</button>
+                    </div>
+                    <label class="modal__checkbox-label">
+                        <input type="checkbox" name="consent" class="modal__checkbox" checked required />
+                        <span class="modal__checkbox-text"
+                            >Отправляя заявку вы подтверждаете <a href="downloads/politika-obrabotki-dannyj.docx" target="_blank" rel="noopener noreferrer" class="modal__link">передачу персональных данных</a> и даете свое согласие на
+                            <a href="downloads/politika-obrabotki-dannyj.docx" target="_blank" rel="noopener noreferrer" class="modal__link">обработку и использование оператором ваших персональных данных</a>.</span
+                        >
+                    </label>
+                </form>
+            </div>
+        </div>
+
+        <script src="js/preloader.js"></script>
+        <script src="js/header-scroll.js"></script>
+        <script src="js/phone-mask.js"></script>
+        <script src="js/reviews-slider-switch.js"></script>
+        <script src="js/slider.js"></script>
+        <script src="js/burger-menu.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/modal.js"></script>
+    </body>
+</html>

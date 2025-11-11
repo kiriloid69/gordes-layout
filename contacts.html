@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Единая городская санитарная служба дезинфекции в Москве</title>
+        <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css" />
+        <link rel="stylesheet" href="node_modules/material-icons/iconfont/material-icons.css" />
+        <link rel="stylesheet" href="css/fonts.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/responsive.css" />
+        <link rel="stylesheet" href="css/preloader.css" />
+
+        <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+        <link rel="shortcut icon" href="favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="favicon/site.webmanifest" />
+    </head>
+    <body id="top">
+        <!-- Прелоадер -->
+        <div class="preloader">
+            <div class="preloader__logo">
+                <img src="images/logo.png" alt="logo" />
+            </div>
+        </div>
+        <!-- Фиксированная шапка для прокрутки -->
+        <header class="header-fixed">
+            <div class="container">
+                <nav class="nav">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="images/logo.png" alt="logo" class="logo__image" />
+                        </a>
+                    </div>
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Услуги</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Для бизнеса</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Цены</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Отзывы</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">О нас</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Контакты</a>
+                        </li>
+                        <li class="nav__item nav__item--callback">
+                            <button class="small-button callback-button callback-button--menu">Заказать обратный звонок</button>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="contacts">
+                    <a href="tel:88001018789" class="contacts__phone"><i class="material-icons">phone</i>8 (800) 101-87-89</a>
+                    <button class="small-button callback-button">Заказать обратный звонок</button>
+                    <button class="burger-menu" id="burgerMenuFixed" aria-label="Меню">
+                        <span class="burger-menu__line"></span>
+                        <span class="burger-menu__line"></span>
+                        <span class="burger-menu__line"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <header class="header">
+            <div class="container">
+                <nav class="nav">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="images/logo.png" alt="logo" class="logo__image" />
+                        </a>
+                    </div>
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Услуги</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Для бизнеса</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Цены</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Отзывы</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">О нас</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Контакты</a>
+                        </li>
+                        <li class="nav__item nav__item--callback">
+                            <button class="small-button callback-button callback-button--menu">Заказать обратный звонок</button>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="contacts">
+                    <a href="tel:88001018789" class="contacts__phone"><i class="material-icons">phone</i>8 (800) 101-87-89</a>
+                    <button class="small-button callback-button">Заказать обратный звонок</button>
+                    <button class="burger-menu" id="burgerMenu" aria-label="Меню">
+                        <span class="burger-menu__line"></span>
+                        <span class="burger-menu__line"></span>
+                        <span class="burger-menu__line"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="menu-overlay" id="menuOverlay"></div>
+
+        <section class="contacts-page">
+            <div class="container">
+                <h1 class="contacts-page__title">Контакты</h1>
+                <div class="contacts-page__content">
+                    <div class="contacts-page__left">
+                        <a href="tel:88001018789" class="contacts-page__phone">8 800 101-87-89</a>
+                        <p class="contacts-page__address">Мытищи, Матросова, 12А</p>
+                        <a href="mailto:info@gordes1.ru" class="contacts-page__email">info@gordes1.ru</a>
+                        <div id="yandex-map" class="contacts-page__map"></div>
+                    </div>
+                    <div class="contacts-page__right">
+                        <div class="contacts-page__right-column contacts-page__right-column--left">
+                            <div class="contacts-page__region">
+                                <h2 class="contacts-page__region-title">Москва</h2>
+                                <ul class="contacts-page__addresses">
+                                    <li><b>Москва,</b> Азовская, 13</li>
+                                    <li><b>Москва,</b> Нижняя Первомайская, 47</li>
+                                    <li><b>Москва,</b> Полярная ул., 41с1</li>
+                                </ul>
+                            </div>
+                            <div class="contacts-page__region">
+                                <h2 class="contacts-page__region-title">Московская область</h2>
+                                <ul class="contacts-page__addresses">
+                                    <li><b>Сергиев Посад,</b> Гефсиманские пруды 4</li>
+                                    <li><b>Красногорск,</b> Ильинский бул, 9</li>
+                                    <li><b>Мытищи,</b> Пирогово, Центральная 1Г</li>
+                                    <li><b>Руза,</b> Федеративная 1</li>
+                                    <li><b>Подольск,</b> бул. 65-летия Победы, 12</li>
+                                    <li><b>Пушкино,</b> 1-й Некрасовский проезд дом 6</li>
+                                    <li><b>Королёв,</b> Циолковского 5</li>
+                                    <li><b>Люберцы,</b> Комсомольская 15А</li>
+                                    <li><b>Люберцы,</b> Октябрьский проспект 1</li>
+                                    <li><b>Щёлково,</b> Советский переулок 25</li>
+                                    <li><b>Мытищи,</b> Матросова 12а</li>
+                                    <li><b>Истра,</b> Щеголева 48</li>
+                                    <li><b>Ногинск,</b> Рабочая 50</li>
+                                    <li><b>Мытищи,</b> Новомытищинский пр-т 12, к 1</li>
+                                    <li><b>Балашиха,</b> Разинское шоссе, 5</li>
+                                    <li><b>Реутов,</b> Победы, д.9</li>
+                                    <li><b>Реутов,</b> Ленина 19/10</li>
+                                    <li><b>Домодедово,</b> Каширское шоссе 7</li>
+                                    <li><b>Раменское,</b> Чугунова 15 б</li>
+                                    <li><b>Клин,</b> Карла Маркса 35</li>
+                                    <li><b>Электросталь,</b> проспект Ленина 25</li>
+                                    <li><b>Дзержинский,</b> улица Карьер ЗИЛ, 2б</li>
+                                    <li><b>Реутов,</b> Салтыковская 53</li>
+                                    <li><b>Одинцово,</b> Садовая 28 А</li>
+                                    <li><b>Химки,</b> Ленинский проспект 1/2</li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        <div class="contacts-page__right-column contacts-page__right-column--right">
+                            <div class="contacts-page__region">
+                                <h2 class="contacts-page__region-title">Санкт Петербург</h2>
+                                <ul class="contacts-page__addresses">
+                                    <li><b>Санкт-Петербург,</b> Южное шоссе 37 корпус 4</li>
+                                </ul>
+                            </div>
+                            <div class="contacts-page__region">
+                                <h2 class="contacts-page__region-title">Краснодар</h2>
+                                <ul class="contacts-page__addresses">
+                                    <li><b>Краснодар,</b> Стасова 182\1</li>
+                                    <li><b>Краснодар,</b> Северная улица, 100</li>
+                                </ul>
+                            </div>
+                            <div class="contacts-page__region">
+                                <h2 class="contacts-page__region-title">Казань</h2>
+                                <ul class="contacts-page__addresses">
+                                    <li><b>Казань,</b> Островского 98</li>
+                                </ul>
+                            </div>
+                            <div class="contacts-page__region">
+                                <h2 class="contacts-page__region-title">Липецк и Липецкая область</h2>
+                                <ul class="contacts-page__addresses">
+                                    <li><b>Липецк,</b> Интернациональная 20</li>
+                                    <li><b>Липецк,</b> Литаврина 6а</li>
+                                    <li><b>Липецк,</b> ул. Артемова 5 А</li>
+                                    <li><b>Липецк,</b> Нахимова 14, 2 этаж , офис 12</li>
+                                </ul>
+                            </div>
+                            <div class="contacts-page__region">
+                                <h2 class="contacts-page__region-title">Воронеж</h2>
+                                <ul class="contacts-page__addresses">
+                                    <li><b>Воронеж,</b> пл. Ленина, 8 б</li>
+                                    <li><b>Воронеж,</b> Московский проспект 42 в</li>
+                                </ul>
+                            </div>
+                            <div class="contacts-page__region">
+                                <h2 class="contacts-page__region-title">Тамбов</h2>
+                                <ul class="contacts-page__addresses">
+                                    <li><b>Тамбов,</b> улица Волжская 71 б</li>
+                                </ul>
+                            </div>
+                            <div class="contacts-page__region">
+                                <h2 class="contacts-page__region-title">Тверь</h2>
+                                <ul class="contacts-page__addresses">
+                                    <li><b>Тверь,</b> Комсомольский проспект 11</li>
+                                </ul>
+                            </div>
+                            <div class="contacts-page__region">
+                                <h2 class="contacts-page__region-title">Тула</h2>
+                                <ul class="contacts-page__addresses">
+                                    <li><b>Тула,</b> Ленина, 26</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer mt-0">
+            <div class="container">
+                <div class="footer__content">
+                    <div class="footer__section footer__section--contacts">
+                        <div class="footer__contact-item footer__contact-item--vertical">
+                            <span class="footer__label">E-mail:</span>
+                            <a href="mailto:info@gordes1.ru" class="footer__link">info@gordes1.ru</a>
+                        </div>
+                        <div class="footer__contact-item footer__contact-item--vertical">
+                            <span class="footer__label">Телефон:</span>
+                            <div class="footer__phones">
+                                <a href="tel:+78001018789" class="footer__link">+7 (800) 101-87-89</a>
+                                <a href="tel:+79959046080" class="footer__link">+7 (995) 904-60-80</a>
+                            </div>
+                            <span class="footer__note">— Отделение по работе с клиентами</span>
+                        </div>
+                        <div class="footer__contact-item footer__contact-item--vertical">
+                            <span class="footer__label">WhatsApp:</span>
+                            <a href="https://wa.me/79933536080" class="footer__link">+7 (993) 353-60-80</a>
+                        </div>
+                        <a href="downloads/politika-obrabotki-dannyj.docx" target="_blank" rel="noopener noreferrer" class="footer__policy">Просмотр политики обработки данных</a>
+                    </div>
+                    <div class="footer__section footer__section--nav">
+                        <nav class="footer__nav">
+                            <a href="#" class="footer__nav-link">Цены</a>
+                            <a href="#" class="footer__nav-link">Юр. лицам</a>
+                            <a href="#" class="footer__nav-link">Услуги</a>
+                            <a href="#" class="footer__nav-link">Статьи</a>
+                            <a href="#" class="footer__nav-link">Отзывы</a>
+                            <a href="#" class="footer__nav-link">Контакты</a>
+                        </nav>
+                        <!-- <a href="#" class="footer__city-link">Выберите город</a> -->
+                    </div>
+                    <div class="footer__section footer__section--top">
+                        <a href="#top" class="footer__top-link">
+                            <span>Наверх</span>
+                            <i class="material-icons">arrow_upward</i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__company">ЕДИНАЯ СЛУЖБА ДЕЗИНФЕКЦИИ "ЗДОРОВЫЙ ГОРОД"</div>
+                    <div class="footer__legal">
+                        <p>ИП Ермаков Даниил Сергеевич. ИНН 480703021969, ОГРНИП 322366800095049</p>
+                        <p>Лицензия № 48.01.01.003.Л.000007.10.24</p>
+                    </div>
+                </div>
+            </div>
+            <a href="https://wa.me/79933536080" class="footer__whatsapp" target="_blank" rel="noopener noreferrer">
+                <span>Напишите нам в WhatsApp</span>
+                <img src="images/icons/wa.svg" alt="WhatsApp" class="footer__whatsapp-icon" />
+            </a>
+        </footer>
+
+        <!-- Модальное окно формы -->
+        <div class="modal-overlay" id="orderModal">
+            <div class="modal">
+                <button class="modal__close" aria-label="Закрыть">
+                    <i class="material-icons">close</i>
+                </button>
+                <h2 class="modal__title">Оставить заявку</h2>
+                <p class="modal__description">Оставьте номер телефона и мы свяжемся с вами в ближайшее время для уточнения деталей вашего заказа и проконсультируем по всем вопросам</p>
+                <form class="modal__form" action="#" method="post">
+                    <div class="modal__fields">
+                        <input type="tel" name="phone" class="modal__input" id="modalPhone" placeholder="Введите ваш телефон" required />
+                        <input type="text" name="name" class="modal__input" id="modalName" placeholder="Ваше имя" required />
+                        <button type="submit" class="modal__button" disabled>Избавиться от вредителей</button>
+                    </div>
+                    <label class="modal__checkbox-label">
+                        <input type="checkbox" name="consent" class="modal__checkbox" checked required />
+                        <span class="modal__checkbox-text"
+                            >Отправляя заявку вы подтверждаете <a href="downloads/politika-obrabotki-dannyj.docx" target="_blank" rel="noopener noreferrer" class="modal__link">передачу персональных данных</a> и даете свое согласие на
+                            <a href="downloads/politika-obrabotki-dannyj.docx" target="_blank" rel="noopener noreferrer" class="modal__link">обработку и использование оператором ваших персональных данных</a>.</span
+                        >
+                    </label>
+                </form>
+            </div>
+        </div>
+
+        <script src="js/preloader.js"></script>
+        <script src="js/header-scroll.js"></script>
+        <script src="js/phone-mask.js"></script>
+        <script src="js/slider.js"></script>
+        <script src="js/burger-menu.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/modal.js"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+        <script>
+            ymaps.ready(function () {
+                var myMap = new ymaps.Map("yandex-map", {
+                    center: [55.9115, 37.7308], // Координаты Мытищи, Матросова, 12А
+                    zoom: 15,
+                });
+
+                var myPlacemark = new ymaps.Placemark(
+                    [55.9115, 37.7308],
+                    {
+                        balloonContent: "Мытищи, Матросова, 12А",
+                    },
+                    {
+                        preset: "islands#blueIcon",
+                    }
+                );
+
+                myMap.geoObjects.add(myPlacemark);
+            });
+        </script>
+    </body>
+</html>

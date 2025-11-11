@@ -1,0 +1,181 @@
+// Обработка кнопки "Читать далее" для services__text
+document.addEventListener('DOMContentLoaded', function() {
+    const readMoreBtn = document.querySelector('.services__read-more');
+    const servicesText = document.querySelector('.services__text');
+    
+    if (readMoreBtn && servicesText) {
+        // Вычисляем высоту контента и устанавливаем начальную высоту (30% видимо)
+        const fullHeight = servicesText.scrollHeight;
+        const initialHeight = fullHeight * 0.3;
+        
+        servicesText.style.maxHeight = initialHeight + 'px';
+        
+        readMoreBtn.addEventListener('click', function() {
+            const isExpanded = servicesText.classList.contains('expanded');
+            
+            if (isExpanded) {
+                // Сворачиваем
+                servicesText.classList.remove('expanded');
+                servicesText.style.maxHeight = initialHeight + 'px';
+                readMoreBtn.classList.remove('expanded');
+                readMoreBtn.querySelector('span').textContent = 'Читать далее';
+            } else {
+                // Разворачиваем
+                servicesText.classList.add('expanded');
+                servicesText.style.maxHeight = fullHeight + 'px';
+                readMoreBtn.classList.add('expanded');
+                readMoreBtn.querySelector('span').textContent = 'Свернуть';
+            }
+        });
+    }
+    
+    // Плавная прокрутка к блоку "Цены" при клике на кнопку "Узнать стоимость"
+    const priceButton = document.querySelector('.hero__button:not(.yellow-button)');
+    if (priceButton && priceButton.textContent.trim() === 'Узнать стоимость') {
+        priceButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            const priceSection = document.getElementById('price');
+            if (priceSection) {
+                const headerOffset = 80; // Отступ от верха (можно настроить)
+                const elementPosition = priceSection.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    }
+
+    // Плавная прокрутка к блоку "Лицензии" при клике на ссылку "Смотреть все документы"
+    const licensesLink = document.querySelector('.hero__link');
+    if (licensesLink && licensesLink.textContent.trim() === 'Смотреть все документы') {
+        licensesLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            const licensesSection = document.getElementById('licenses');
+            if (licensesSection) {
+                const headerOffset = 80; // Отступ от верха (можно настроить)
+                const elementPosition = licensesSection.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    }
+
+    // Плавная прокрутка к верху страницы
+    const topLink = document.querySelector('.footer__top-link');
+    if (topLink) {
+        topLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // Переключение табов в price-table
+    const tabTitles = document.querySelectorAll('.price-table__table-title');
+    const contentItems = document.querySelectorAll('.price-table__content-item');
+
+    if (tabTitles.length > 0 && contentItems.length > 0) {
+        tabTitles.forEach(function(tab) {
+            tab.addEventListener('click', function() {
+                const tabIndex = this.getAttribute('data-tab');
+
+                // Убираем активный класс со всех табов
+                tabTitles.forEach(function(t) {
+                    t.classList.remove('active');
+                });
+
+                // Убираем активный класс со всего контента
+                contentItems.forEach(function(item) {
+                    item.classList.remove('active');
+                });
+
+                // Добавляем активный класс к выбранному табу
+                this.classList.add('active');
+
+                // Показываем соответствующий контент
+                const targetContent = document.querySelector(`.price-table__content-item[data-content="${tabIndex}"]`);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+    }
+
+    // Синхронизация высоты кнопок в каждом ряду cat-items
+    function syncButtonHeights() {
+        const catItemsContainers = document.querySelectorAll('.cat-items');
+        
+        catItemsContainers.forEach(function(container) {
+            const items = container.querySelectorAll('.cat-item');
+            if (items.length === 0) return;
+            
+            // Группируем элементы по рядам
+            const rows = [];
+            let currentRow = [];
+            let currentTop = null;
+            
+            items.forEach(function(item, index) {
+                const rect = item.getBoundingClientRect();
+                
+                if (currentTop === null || Math.abs(rect.top - currentTop) < 5) {
+                    // Тот же ряд
+                    currentRow.push(item);
+                    if (currentTop === null) currentTop = rect.top;
+                } else {
+                    // Новый ряд
+                    if (currentRow.length > 0) {
+                        rows.push(currentRow);
+                    }
+                    currentRow = [item];
+                    currentTop = rect.top;
+                }
+            });
+            
+            // Добавляем последний ряд
+            if (currentRow.length > 0) {
+                rows.push(currentRow);
+            }
+            
+            // Для каждого ряда находим максимальную высоту кнопки и применяем ко всем
+            rows.forEach(function(row) {
+                let maxHeight = 0;
+                const buttons = [];
+                
+                row.forEach(function(item) {
+                    const button = item.querySelector('.cat-item__button');
+                    if (button) {
+                        buttons.push(button);
+                        // Сбрасываем высоту для правильного измерения
+                        button.style.height = 'auto';
+                        const height = button.offsetHeight;
+                        if (height > maxHeight) {
+                            maxHeight = height;
+                        }
+                    }
+                });
+                
+                // Применяем максимальную высоту ко всем кнопкам в ряду
+                buttons.forEach(function(button) {
+                    button.style.height = maxHeight + 'px';
+                });
+            });
+        });
+    }
+    
+    // Вызываем при загрузке и изменении размера окна
+    syncButtonHeights();
+    window.addEventListener('resize', syncButtonHeights);
+    
+    // Также вызываем после небольшой задержки для учета загрузки изображений
+    setTimeout(syncButtonHeights, 500);
+});
+

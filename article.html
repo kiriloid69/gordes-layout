@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Единая городская санитарная служба дезинфекции в Москве</title>
+        <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css" />
+        <link rel="stylesheet" href="node_modules/material-icons/iconfont/material-icons.css" />
+        <link rel="stylesheet" href="css/fonts.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/responsive.css" />
+        <link rel="stylesheet" href="css/preloader.css" />
+
+        <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+        <link rel="shortcut icon" href="favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="favicon/site.webmanifest" />
+</head>
+    <body id="top">
+        <!-- Прелоадер -->
+        <div class="preloader">
+            <div class="preloader__logo">
+                <img src="images/logo.png" alt="logo" />
+            </div>
+        </div>
+        <!-- Фиксированная шапка для прокрутки -->
+        <header class="header-fixed">
+            <div class="container">
+                <nav class="nav">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="images/logo.png" alt="logo" class="logo__image" />
+                        </a>
+                    </div>
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Услуги</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Для бизнеса</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Цены</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Отзывы</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">О нас</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Контакты</a>
+                        </li>
+                        <li class="nav__item nav__item--callback">
+                            <button class="small-button callback-button callback-button--menu">Заказать обратный звонок</button>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="contacts">
+                    <a href="tel:88001018789" class="contacts__phone"><i class="material-icons">phone</i>8 (800) 101-87-89</a>
+                    <button class="small-button callback-button">Заказать обратный звонок</button>
+                    <button class="burger-menu" id="burgerMenuFixed" aria-label="Меню">
+                        <span class="burger-menu__line"></span>
+                        <span class="burger-menu__line"></span>
+                        <span class="burger-menu__line"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="page-wrapper">
+            <header class="header">
+                <div class="container">
+                    <nav class="nav">
+                        <div class="logo">
+                            <a href="#">
+                                <img src="images/logo.png" alt="logo" class="logo__image" />
+                            </a>
+                        </div>
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Услуги</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Для бизнеса</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Цены</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Отзывы</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">О нас</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Контакты</a>
+                            </li>
+                            <li class="nav__item nav__item--callback">
+                                <button class="small-button callback-button callback-button--menu">Заказать обратный звонок</button>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="contacts">
+                        <a href="tel:88001018789" class="contacts__phone"><i class="material-icons">phone</i>8 (800) 101-87-89</a>
+                        <button class="small-button callback-button">Заказать обратный звонок</button>
+                        <button class="burger-menu" id="burgerMenu" aria-label="Меню">
+                            <span class="burger-menu__line"></span>
+                            <span class="burger-menu__line"></span>
+                            <span class="burger-menu__line"></span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <div class="menu-overlay" id="menuOverlay"></div>
+            <main class="main">
+                <section class="hero">
+                    <div class="container">
+                        <h1 class="hero__title">
+                            <span class="blue-text">
+                                Как избавиться от тараканов в комнате общежития</span
+                            >
+                        </h1>
+                        <p class="hero__description">Работаем с 2010 года. Бесплатная консультация.</p>
+                        <div class="hero__button__group">
+                            <button class="medium-button yellow-button hero__button">Государственная лицензия</button>
+                            <button class="medium-button hero__button">Узнать стоимость</button>
+                        </div>
+                        <div><a href="#" class="hero__link">Смотреть все документы</a></div>
+                        <div class="hero__advantages-wrapper">
+                            <div class="ant-bg">
+                                <img src="images/ant.png" alt="ant" />
+                            </div>
+                            <div class="hero__advantages">
+                                <div class="hero__advantage">
+                                    <div class="hero__advantage-image">
+                                        <img src="images/advantage-1.png" alt="advantage-1" />
+                                    </div>
+                                    <div class="hero__advantage-text">
+                                        <h3 class="hero__advantage-title">Без вреда <br> для детей и животных</h3>
+                                    </div>
+                                </div>
+                                <div class="hero__advantage">
+                                    <div class="hero__advantage-image">
+                                        <img src="images/advantage-2.png" alt="advantage-2" />
+                                    </div>
+                                    <div class="hero__advantage-text">
+                                        <h3 class="hero__advantage-title">Одобрено  <br> Роспотребнадзором</h3>
+                                    </div>
+                                </div>
+                                <div class="hero__advantage">
+                                    <div class="hero__advantage-image">
+                                        <img src="images/advantage-3.png" alt="advantage-3" />
+                                    </div>
+                                    <div class="hero__advantage-text">
+                                        <h3 class="hero__advantage-title">Гарантия <br> по договору</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <section class="article-content">
+            <div class="container">
+                <article class="article">                    
+                    <div class="article__section">
+                        <h2 class="article__heading">Причины появления насекомых</h2>
+                        <p class="article__text">Проблема тараканов в общежитии — одна из самых распространённых среди студентов и жильцов коммунальных помещений. Такие условия благоприятны для насекомых: много людей, общие зоны, тепло и доступ к воде. Даже при чистоте в своей комнате, тараканы легко пробираются из других мест — коридоров, кухни или санузлов.</p>
+                        <img src="images/tarakany_v_obshchezhitii.jpg" alt="Тараканы в общежитии" class="article__image" />
+                        <p class="article__text">Насекомые питаются органикой, остатками еды, бумагой и даже мылом. Если не проводить санитарную обработку помещений и не использовать специальные средства, колония быстро разрастается. Особенно часто заражение происходит ночью — именно в это время тараканы выходят из укрытий в поисках пищи и воды. Днём вы можете не замечать их активности, но это не значит, что их нет. Постепенно популяция увеличивается, и тараканы начинают появляться даже днём — это тревожный сигнал.</p>
+                        <p class="article__text">Нужно учитывать, что в общежитиях тараканы не ограничиваются одной комнатой — они перемещаются между блоками, по вентиляции и щелям, заражая всё здание. Самостоятельно избавиться от них можно, но только при системном подходе и с применением эффективных средств борьбы.</p>
+                    </div>
+
+                    <div class="article__section">
+                        <h2 class="article__heading">Основные пути проникновения насекомых</h2>
+                        <p class="article__text">Тараканы редко появляются «с улицы». Гораздо чаще они мигрируют из других комнат, подсобных помещений или даже из квартиры соседей. Особенно активно они используют вентиляцию, трещины, короба и щели под плинтусами. Это подтверждает необходимость герметизации всех входов до начала обработки.</p>
+                        <img src="images/tarakany_v_obshchezhitii.jpg" alt="Пути проникновения тараканов" class="article__image" />
+                        <p class="article__text"><strong>Типовые места проникновения:</strong></p>
+                        <ul class="article__list">
+                            <li>Вентиляционные шахты и воздуховоды.</li>
+                            <li>Щели в полу, стенах, дверных проёмах.</li>
+                            <li>Коммуникационные отверстия под трубы и проводку.</li>
+                            <li>Задние панели бытовой техники — холодильников, плит, стиральных машин.</li>
+                            <li>Полости и ящики мебели.</li>
+                            <li>Подвалы, чердаки, мусоропроводы.</li>
+                        </ul>
+                        <p class="article__text">В общежитии обработка одного помещения редко даёт результат, если тараканы беспрепятственно заходят из других помещений. Важно перекрыть пути миграции, особенно в местах с повышенной влажностью и накоплением мусора. Без этого даже самая мощная дезинсекция будет временной.</p>
+                    </div>
+
+                    <div class="article__section">
+                        <h2 class="article__heading">Эффективные методы борьбы с тараканами</h2>
+                        <p class="article__text">Для эффективной борьбы с тараканами в условиях общежития требуется комплексный подход. Применение одного средства, особенно без подготовки помещения, почти всегда не даёт устойчивого результата. Насекомые выживают, адаптируются к химикатам, перемещаются между помещениями и возвращаются через несколько дней. Поэтому важно соблюдать все этапы: санитарная подготовка, герметизация, обработка и профилактика.</p>
+                        <img src="images/tarakany_v_obshchezhitii.jpg" alt="Методы борьбы с тараканами" class="article__image" />
+                        <p class="article__text">В общежитии борьба с тараканами — это не только задача одного человека. Без согласованных действий всех жильцов результат будет временным. Особенно если в соседней комнате или квартире не проводится уборка, остаётся доступ к пище и воде. Насекомые легко возвращаются по вентиляции, полу или щелям в стенах.</p>
+                        <p class="article__text"><strong>Рекомендованные методы:</strong></p>
+                        <ul class="article__list">
+                            <li>Проведение санитарной подготовки с обязательной очисткой всех поверхностей.</li>
+                            <li>Герметизация всех щелей, вентиляции и проходов.</li>
+                            <li>Использование современных средств: гелей, порошков, ловушек.</li>
+                            <li>Повторная дезинсекция через 10–14 дней.</li>
+                            <li>Профилактика каждые 3–6 месяцев.</li>
+                        </ul>
+                        <p class="article__text">Если в общежитии проживает много людей и санитарные нормы часто нарушаются, необходимо подключать администрацию или обращаться в СЭС. В ряде случаев помогает централизованная обработка. Также стоит рассмотреть профессиональные способы борьбы: они дают лучший результат и снижают риск повторного заражения.</p>
+                    </div>
+
+                    <div class="article__section">
+                        <h2 class="article__heading">Сравнение эффективности различных средств</h2>
+                        <p class="article__text">Правильно подобранные средства против тараканов — ключ к успешному избавлению от тараканов. В общежитии важно учитывать, что в одной комнате может жить несколько человек, поэтому средства должны быть безопасны, малотоксичны и при этом эффективно действовать в труднодоступных местах. Ниже — обзор популярных вариантов.</p>
+                        <img src="images/tarakany_v_obshchezhitii.jpg" alt="Средства от тараканов" class="article__image" />
+                        <div class="article__comparison">
+                            <div class="article__comparison-item">
+                                <h3 class="article__subheading">Гели</h3>
+                                <ul class="article__list">
+                                    <li>Работают через контакт и поедание.</li>
+                                    <li>Подходят для любых мест, безопасны при правильном применении.</li>
+                                    <li>Эффект до 2 месяцев, особенно хорошо работают в сочетании с ловушками.</li>
+                                </ul>
+                            </div>
+                            <div class="article__comparison-item">
+                                <h3 class="article__subheading">Аэрозоли</h3>
+                                <ul class="article__list">
+                                    <li>Уничтожают взрослых особей моментально.</li>
+                                    <li>Не воздействуют на яйца и личинок.</li>
+                                    <li>Требуют проветривания, обработки в перчатках и респираторе.</li>
+                                </ul>
+                            </div>
+                            <div class="article__comparison-item">
+                                <h3 class="article__subheading">Порошки, борная кислота, дуст</h3>
+                                <ul class="article__list">
+                                    <li>Доступные и надёжные средства для борьбы.</li>
+                                    <li>Эффективны в труднодоступных местах.</li>
+                                    <li>Требуют времени, но дают хороший результат.</li>
+                                </ul>
+                            </div>
+                            <div class="article__comparison-item">
+                                <h3 class="article__subheading">Ловушки и приманки</h3>
+                                <ul class="article__list">
+                                    <li>Контролируют численность.</li>
+                                    <li>Удобны для оценки эффективности обработки.</li>
+                                    <li>Не решают проблему при массовом заражении.</li>
+                                </ul>
+                            </div>
+                            <div class="article__comparison-item">
+                                <h3 class="article__subheading">Ультразвуковые отпугиватели</h3>
+                                <ul class="article__list">
+                                    <li>Сомнительная эффективность в условиях общежитий.</li>
+                                    <li>Только отпугивают вредителей.</li>
+                                    <li>Могут не работать из-за фонового шума.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="article__text">Оптимальный способ — комбинировать несколько средств: гель + порошок + ловушки. При этом нельзя забывать про уборку, устранение влаги и перекрытие всех возможных лазеек. Только в этом случае можно избавиться от вредителей надолго.</p>
+                    </div>
+
+                    <div class="article__section">
+                        <h2 class="article__heading">Пошаговая инструкция по уничтожению тараканов</h2>
+                        <p class="article__text">Чтобы избавиться от тараканов в условиях общежития, необходимо действовать по строго определённой схеме. Одиночные меры — временное решение. Только системная дезинсекция позволяет избавиться от насекомых даже при повторном заносе.</p>
+                        <img src="images/tarakany_v_obshchezhitii.jpg" alt="Инструкция по уничтожению тараканов" class="article__image" />
+                        <div class="article__steps">
+                            <div class="article__step">
+                                <h3 class="article__subheading">Шаг 1. Санитарная подготовка</h3>
+                                <p class="article__text">Перед началом обработки проведите глубокую уборку. Это важно: загрязнённые поверхности, остатки жира и пищи блокируют действие инсектицидов и уменьшают их эффективность.</p>
+                                <ul class="article__list">
+                                    <li>Удалите крошки, жир и остатки еды со всех поверхностей.</li>
+                                    <li>Уберите посуду, закройте продукты в герметичную тару.</li>
+                                    <li>Вытрите пол, протрите полки и шкафы.</li>
+                                    <li>Устраните источник воды — высушите тряпки, уберите миски, устраните протечки.</li>
+                                    <li>Проверьте укромные места: под кроватью, за шкафом, возле мусорного ведра.</li>
+                                </ul>
+                            </div>
+                            <div class="article__step">
+                                <h3 class="article__subheading">Шаг 2. Герметизация помещения</h3>
+                                <p class="article__text">На этом этапе важно перекрыть пути миграции насекомых. Даже после обработки тараканы могут вернуться из других мест.</p>
+                                <ul class="article__list">
+                                    <li>Заделайте щели в полу и стенах герметиком или пеной.</li>
+                                    <li>Заклейте щели возле труб, проводов и розеток.</li>
+                                    <li>Поставьте решётки на вентиляционные отверстия.</li>
+                                    <li>Уплотните входную дверь и окна.</li>
+                                    <li>Проверьте мебель, задвиньте её плотно к стене, протрите внутренности.</li>
+                                </ul>
+                            </div>
+                            <div class="article__step">
+                                <h3 class="article__subheading">Шаг 3. Обработка помещения</h3>
+                                <p class="article__text">Теперь можно приступать к использованию средств. Выбор зависит от условий и бюджета, но лучше использовать комбинированный подход.</p>
+                                <ul class="article__list">
+                                    <li>Нанесите гель под плинтусами, за плитой, холодильником, в шкафах.</li>
+                                    <li>Рассыпьте борную кислоту в сухих местах: под кроватью, за мебелью.</li>
+                                    <li>Распылите аэрозоль по инструкции — особенно в местах скопления насекомых.</li>
+                                    <li>Установите ловушки — в виде клейких полосок или приманок.</li>
+                                    <li>Повторите обработку через 10–14 дней.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="article__text"><strong>Важно:</strong> дезинсекция эффективна только при соблюдении всех трёх шагов. Если тараканы появляются снова, проверьте, не упущены ли какие-либо участки или щели. При необходимости подключите соседей или управляющую компанию — тараканы часто мигрируют от других жильцов.</p>
+                    </div>
+
+                    <div class="article__section">
+                        <h2 class="article__heading">Частые ошибки при самостоятельной обработке</h2>
+                        <p class="article__text">Многие жильцы общежитий совершают одни и те же ошибки при попытке избавиться от тараканов. В результате обработка не приносит должного эффекта, насекомые возвращаются, а заражение усиливается. Особенно часто проблема возникает при нарушении последовательности работ и игнорировании подготовки.</p>
+                        <img src="images/tarakany_v_obshchezhitii.jpg" alt="Ошибки при обработке" class="article__image" />
+                        <p class="article__text"><strong>Наиболее распространённые ошибки:</strong></p>
+                        <ul class="article__list">
+                            <li>Использование только аэрозоля без геля или порошка — не влияет на яйца и личинок.</li>
+                            <li>Отсутствие предварительной уборки — грязные поверхности блокируют действие средств.</li>
+                            <li>Пропуск герметизации — тараканы возвращаются из других комнат через вентиляцию.</li>
+                            <li>Частичная обработка — игнорируются скрытые места: за плитой, под шкафом, в коробах.</li>
+                            <li>Немедленная уборка геля — средство не успевает подействовать.</li>
+                            <li>Отказ от повторной обработки — личинки выживают и формируют новую колонию.</li>
+                            <li>Применение устаревших или слабых препаратов, к которым у насекомых выработалась устойчивость.</li>
+                        </ul>
+                        <p class="article__text">Чтобы избежать этих ошибок, важно следовать пошаговой инструкции, использовать современные средства и повторять обработку при необходимости.</p>
+                    </div>
+
+                    <div class="article__section">
+                        <h2 class="article__heading">Почему нужна профессиональная дезинсекция</h2>
+                        <p class="article__text">Профессиональная дезинсекция — оптимальное решение при массовом заражении. Особенно это важно в общежитиях, где тараканы заселяют несколько комнат, общие зоны и технические помещения. Домашние методы могут не справиться с устойчивой популяцией, особенно если колония давно сформирована.</p>
+                        <img src="images/tarakany_v_obshchezhitii.jpg" alt="Профессиональная дезинсекция" class="article__image" />
+                        <p class="article__text"><strong>Преимущества обращения к специалистам:</strong></p>
+                        <ul class="article__list">
+                            <li>Применение сертифицированных препаратов, эффективных против всех стадий развития насекомых.</li>
+                            <li>Обработка всех рисковых участков: мебели, техники, вентиляции, труднодоступных мест.</li>
+                            <li>Использование методов туманообразования и барьерной защиты.</li>
+                            <li>Безопасность для человека, животных и окружающей среды при соблюдении инструкции.</li>
+                            <li>Повторная бесплатная дезинсекция при сохранении проблемы в течение гарантийного срока.</li>
+                        </ul>
+                        <p class="article__text"><strong>Когда обязательно обращаться в СЭС или специализированную службу:</strong></p>
+                        <ul class="article__list">
+                            <li>Если тараканы появляются снова через несколько дней после самостоятельной обработки.</li>
+                            <li>При наличии яиц, гнёзд, массовой дневной активности насекомых.</li>
+                            <li>Если заражены не только комнаты, но и кухня, санузел, подсобные помещения.</li>
+                            <li>Если вы проживаете в квартире с детьми или аллергиками — требуется безопасная обработка.</li>
+                            <li>При необходимости официальных документов: акта обработки, договора, гарантии.</li>
+                        </ul>
+                        <p class="article__text">Профессиональные службы обычно предоставляют отчётные документы для администрации общежития, а также рекомендации по профилактике и уходу после дезинсекции.</p>
+                    </div>
+
+                    <div class="article__section">
+                        <h2 class="article__heading">Заключение</h2>
+                        <p class="article__text">Появление тараканов в общежитии — не просто бытовая неприятность. Это сигнал о нарушении санитарных условий и потенциальная угроза здоровью человека. Насекомые разносят бактерии, провоцируют аллергию, заражают продукты и поверхности. При этом избавиться от тараканов непросто: они устойчивы к температуре, скрываются в труднодоступных местах и быстро размножаются.</p>
+                        <img src="images/tarakany_v_obshchezhitii.jpg" alt="Заключение" class="article__image" />
+                        <p class="article__text">Чтобы решить проблему:</p>
+                        <ul class="article__list">
+                            <li>Не экономьте на средствах — используйте современные гели, порошки, аэрозоли в комплексе.</li>
+                            <li>Уделяйте внимание подготовке: уборка, герметизация, устранение воды, недоступность еды.</li>
+                            <li>Не забывайте о профилактике — повторная дезинсекция через 10–14 дней обязательна.</li>
+                            <li>При сильном заражении сразу обращайтесь в СЭС или дезслужбу.</li>
+                        </ul>
+                        <p class="article__text"><strong>Советы:</strong></p>
+                        <ul class="article__list">
+                            <li>Поддерживайте чистоту — тараканы заводятся там, где есть жир, влага и остатки еды.</li>
+                            <li>Не храните воду открыто: мокрые тряпки, чашки, протечки — всё это способствует заражению.</li>
+                            <li>Используйте дератизационные и дезинсекционные методы в комплексе.</li>
+                            <li>Проверяйте труднодоступные места: под техникой, в углах, в вентиляции.</li>
+                            <li>Изучайте разные способы борьбы и применяйте их в виде схемы, а не по отдельности.</li>
+                        </ul>
+                        <p class="article__text">Если тараканы продолжают появляться несмотря на самостоятельные меры, не откладывайте вызов специалистов. Профессиональная обработка стоит дешевле, чем постоянные покупки бытовых средств, и даёт более стабильный результат.</p>
+                        <p class="article__text">Системный подход, коллективные меры и правильное применение средств — единственный надёжный способ избавиться от тараканов в комнате общежития или во всём блоке. Не допускайте повторных ошибок, соблюдайте санитарные нормы и регулярно проводите профилактику. Это защитит не только ваше помещение, но и здоровье всех жильцов.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <footer class="footer mt-0">
+            <div class="container">
+                <div class="footer__content">
+                    <div class="footer__section footer__section--contacts">
+                        <div class="footer__contact-item footer__contact-item--vertical">
+                            <span class="footer__label">E-mail:</span>
+                            <a href="mailto:info@gordes1.ru" class="footer__link">info@gordes1.ru</a>
+                        </div>
+                        <div class="footer__contact-item footer__contact-item--vertical">
+                            <span class="footer__label">Телефон:</span>
+                            <div class="footer__phones">
+                                <a href="tel:+78001018789" class="footer__link">+7 (800) 101-87-89</a>
+                                <a href="tel:+79959046080" class="footer__link">+7 (995) 904-60-80</a>
+                            </div>
+                            <span class="footer__note">— Отделение по работе с клиентами</span>
+                        </div>
+                        <div class="footer__contact-item footer__contact-item--vertical">
+                            <span class="footer__label">WhatsApp:</span>
+                            <a href="https://wa.me/79933536080" class="footer__link">+7 (993) 353-60-80</a>
+                        </div>
+                        <a href="downloads/politika-obrabotki-dannyj.docx" target="_blank" rel="noopener noreferrer" class="footer__policy">Просмотр политики обработки данных</a>
+                    </div>
+                    <div class="footer__section footer__section--nav">
+                        <nav class="footer__nav">
+                            <a href="#" class="footer__nav-link">Цены</a>
+                            <a href="#" class="footer__nav-link">Юр. лицам</a>
+                            <a href="#" class="footer__nav-link">Услуги</a>
+                            <a href="#" class="footer__nav-link">Статьи</a>
+                            <a href="#" class="footer__nav-link">Отзывы</a>
+                            <a href="#" class="footer__nav-link">Контакты</a>
+                        </nav>
+                        <!-- <a href="#" class="footer__city-link">Выберите город</a> -->
+                    </div>
+                    <div class="footer__section footer__section--top">
+                        <a href="#top" class="footer__top-link">
+                            <span>Наверх</span>
+                            <i class="material-icons">arrow_upward</i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__company">ЕДИНАЯ СЛУЖБА ДЕЗИНФЕКЦИИ "ЗДОРОВЫЙ ГОРОД"</div>
+                    <div class="footer__legal">
+                        <p>ИП Ермаков Даниил Сергеевич. ИНН 480703021969, ОГРНИП 322366800095049</p>
+                        <p>Лицензия № 48.01.01.003.Л.000007.10.24</p>
+                    </div>
+                </div>
+            </div>
+            <a href="https://wa.me/79933536080" class="footer__whatsapp" target="_blank" rel="noopener noreferrer">
+                <span>Напишите нам в WhatsApp</span>
+                <img src="images/icons/wa.svg" alt="WhatsApp" class="footer__whatsapp-icon" />
+            </a>
+        </footer>
+
+    <!-- Модальное окно формы -->
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal">
+            <button class="modal__close" aria-label="Закрыть">
+                <i class="material-icons">close</i>
+            </button>
+            <h2 class="modal__title">Оставить заявку</h2>
+            <p class="modal__description">Оставьте номер телефона и мы свяжемся с вами в ближайшее время для уточнения деталей вашего заказа и проконсультируем по всем вопросам</p>
+            <form class="modal__form" action="#" method="post">
+                <div class="modal__fields">
+                    <input type="tel" name="phone" class="modal__input" id="modalPhone" placeholder="Введите ваш телефон" required />
+                    <input type="text" name="name" class="modal__input" id="modalName" placeholder="Ваше имя" required />
+                    <button type="submit" class="modal__button" disabled>Избавиться от вредителей</button>
+                </div>
+                <label class="modal__checkbox-label">
+                    <input type="checkbox" name="consent" class="modal__checkbox" checked required />
+                    <span class="modal__checkbox-text">Отправляя заявку вы подтверждаете <a href="downloads/politika-obrabotki-dannyj.docx" target="_blank" rel="noopener noreferrer" class="modal__link">передачу персональных данных</a> и даете свое согласие на <a href="downloads/politika-obrabotki-dannyj.docx" target="_blank" rel="noopener noreferrer" class="modal__link">обработку и использование оператором ваших персональных данных</a>.</span>
+                </label>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/preloader.js"></script>
+    <script src="js/header-scroll.js"></script>
+    <script src="js/phone-mask.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/burger-menu.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+</html>

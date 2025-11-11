@@ -1,0 +1,964 @@
+// Переменные
+$white-color: #ffffff;
+$blue-color: #105186;
+
+// Слайдеры отзывов - переключение между десктопом и мобильным
+.reviews__slider--desktop {
+    display: block;
+}
+
+.reviews__slider--mobile {
+    display: none;
+}
+
+// Слайдеры сертификатов - переключение между десктопом и мобильным
+.licenses__slider--desktop {
+    display: block;
+}
+
+.licenses__slider--mobile {
+    display: none;
+}
+
+// Скрываем кнопку в меню на всех экранах больше 480px
+@media (min-width: 481px) {
+    .nav__item--callback {
+        display: none !important;
+    }
+}
+
+// Адаптивные стили для устройств 1024px и меньше
+@media (max-width: 1024px) {
+    // Предотвращение горизонтальной прокрутки
+    html,
+    body {
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+
+    // Изменение ширины контейнера
+    .container {
+        width: 980px;
+        padding: 0 20px;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .page-wrapper {
+        background-position: -700px center;
+    }
+
+    .nav {
+        &__list {
+            gap: 20px;
+        }
+        &__link {
+            font-size: 16px;
+        }
+    }
+
+    .cat-items {
+        gap: 20px;
+        justify-content: center;
+    }
+    .cat-item {
+        max-width: 30%;
+    }
+
+    .object-items {
+        gap: 20px;
+        justify-content: center;
+    }
+    .object-item {
+        flex: 0 0 calc(33.333% - 14px);
+        max-width: calc(33.333% - 14px);
+    }
+
+    .three__services {
+        &__icon {
+            height: 48px;
+            width: 48px;
+        }
+    }
+
+    .price-table {
+        max-width: 85%;
+    }
+    .contacts__phone {
+        font-size: 16px;
+        &__item {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        &__content-text {
+            text-align: center;
+        }
+
+        // Slider адаптация
+        .slider-container {
+            margin: 30px 0;
+        }
+
+        .slider {
+            &__item {
+                padding: 0 60px; // Отступы для стрелок внутри контейнера
+
+                img {
+                    max-height: 400px;
+                }
+            }
+
+            &__arrow {
+                width: 40px;
+                height: 40px;
+
+                i {
+                    font-size: 24px;
+                }
+
+                &--prev {
+                    left: 10px; // Внутри контейнера для адаптива
+                }
+
+                &--next {
+                    right: 10px; // Внутри контейнера для адаптива
+                }
+            }
+
+            &__dots {
+                margin-top: 15px;
+                gap: 8px;
+            }
+
+            &__dot {
+                width: 10px;
+                height: 10px;
+
+                &.active {
+                    width: 28px;
+                }
+            }
+        }
+
+        // Lightbox адаптация
+        .lightbox {
+            &__content {
+                padding: 40px 20px;
+                max-width: 95%;
+            }
+
+            &__image {
+                max-height: 85vh;
+            }
+
+            &__close {
+                top: 20px;
+                right: 20px;
+                width: 36px;
+                height: 36px;
+
+                i {
+                    font-size: 20px;
+                }
+            }
+
+            &__arrow {
+                width: 40px;
+                height: 40px;
+
+                i {
+                    font-size: 24px;
+                }
+
+                &--prev {
+                    left: 10px;
+                }
+
+                &--next {
+                    right: 10px;
+                }
+            }
+        }
+    }
+
+    // Партнеры - адаптация для планшетов
+    .partners {
+        &__item {
+            flex: 0 0 calc(20% - 13px); // 5 элементов в строке
+            max-width: calc(20% - 13px);
+            min-width: 0;
+            width: calc(20% - 13px);
+        }
+    }
+}
+
+// Адаптивные стили для устройств 768px и меньше
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px !important;
+    }
+    h2 {
+        font-size: 32px;
+        margin: 24px auto;
+    }
+
+    // Меняем порядок полей в форме order-specialist
+    .order-specialist__fields {
+        input[name="name"] {
+            order: 2;
+        }
+        input[name="phone"] {
+            order: 1;
+        }
+        button {
+            order: 3;
+        }
+    }
+
+    .container {
+        width: 720px;
+    }
+
+    .section {
+        &__subtitle {
+            font-size: 20px;
+            max-width: 80%;
+        }
+    }
+
+    .page-wrapper {
+        background-position: -640px center;
+    }
+
+    .main {
+        & .hero {
+            &__title {
+                width: 70%;
+            }
+            &__description {
+                font-size: 20px;
+                margin: 24px 0 16px 0;
+            }
+            &__advantages {
+                & img {
+                    width: 70px;
+                }
+            }
+            &__advantage-title {
+                font-size: 16px;
+            }
+            & .ant-bg {
+                position: absolute;
+                top: -70px;
+                right: -70px;
+                z-index: 1;
+                width: 150px;
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+        .header {
+            .container {
+                position: relative;
+            }
+        }
+
+        & .hero__advantages-wrapper {
+            margin-top: 20px;
+        }
+        & .hero__advantages {
+            padding: 0 6px;
+        }
+    }
+
+    .header {
+        .container {
+            position: relative;
+        }
+    }
+
+    .nav {
+        // width: 100%;
+
+        &__list {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 320px;
+            height: 100vh;
+            background-color: $white-color;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 80px 30px 30px;
+            gap: 20px;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+            transition: right 0.3s ease;
+            z-index: 1000;
+            overflow-y: auto;
+            display: none;
+            margin-block-start: 0;
+            margin-block-end: 0;
+
+            &.active {
+                right: 0;
+                justify-content: flex-start;
+                gap: 4px;
+                display: flex;
+            }
+        }
+
+        &__item {
+            width: 100%;
+
+            &--callback {
+                display: none !important; // Скрываем кнопку в меню на экранах больше 480px
+            }
+        }
+
+        &__link {
+            display: block;
+            padding: 10px 0;
+            font-size: 18px;
+            width: 100%;
+        }
+    }
+
+    .contacts-page__content {
+        grid-template-columns: 1fr;
+    }
+
+    .contacts-page__left {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .cat-item__image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .object-items {
+        gap: 15px;
+        justify-content: center;
+    }
+    .object-item {
+        flex: 0 0 calc(50% - 8px);
+        max-width: calc(50% - 8px);
+        margin: 10px 0;
+    }
+
+    .three-services {
+        &__content {
+            flex-wrap: wrap;
+        }
+    }
+
+    .three-services__column {
+        &--left {
+            flex: 0 0 calc(50% - 10px);
+            width: calc(50% - 10px);
+            order: 2;
+
+            & .three-services__item {
+                flex-direction: row;
+            }
+            & .three-services__content-text {
+                text-align: left;
+            }
+        }
+        &--center {
+            flex: 0 0 60%;
+            width: 60%;
+            order: 1;
+            margin: 0 auto 20px;
+            display: block;
+            & img {
+                text-align: center;
+            }
+        }
+        &--right {
+            flex: 0 0 calc(50% - 10px);
+            width: calc(50% - 10px);
+            order: 3;
+        }
+    }
+
+    .price-table {
+        max-width: 100%;
+    }
+
+    .risks {
+        padding: 32px 0;
+        background-position-x: -300px;
+        &__list {
+            max-width: 70%;
+        }
+        &__item {
+            gap: 16px;
+            &-title {
+                font-size: 20px;
+            }
+            &-text {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .legal-entities__content {
+        flex-direction: column;
+        &__side {
+            & img {
+                max-width: 70%;
+                margin: 0 auto;
+            }
+        }
+        &__list {
+            gap: 16px;
+        }
+        &__item {
+            font-size: 16px;
+        }
+    }
+
+    .slider__item {
+        padding: 0 20px;
+    }
+
+    .slider__arrow--next {
+        right: -26px;
+    }
+    .slider__arrow--prev {
+        left: -26px;
+    }
+
+    .lightbox__image {
+        max-width: 95vw;
+    }
+
+    .licenses {
+        &__main {
+            flex-direction: column;
+            gap: 24px;
+        }
+        &__image-wrapper {
+            max-width: 60%;
+        }
+        &__title {
+            font-size: 20px;
+        }
+        &__description {
+            font-size: 16px;
+        }
+        &__link {
+            font-size: 16px;
+        }
+    }
+
+    // Показываем бургер-меню только на мобильных
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 18px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        margin-left: 15px;
+        z-index: 1001;
+        position: relative;
+        border-radius: 2px;
+
+        &__line {
+            width: 100%;
+            height: 3px;
+            background-color: $blue-color;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            transform-origin: center;
+            display: block;
+            position: relative;
+        }
+
+        &.active {
+            .burger-menu__line {
+                &:nth-child(1) {
+                    transform: translateY(7.5px) rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                    transform: scaleX(0);
+                }
+
+                &:nth-child(3) {
+                    transform: translateY(-7.5px) rotate(-45deg);
+                }
+            }
+        }
+
+        &:hover {
+            .burger-menu__line {
+                background-color: darken($blue-color, 10%);
+            }
+        }
+    }
+
+    // Оверлей для меню
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 999;
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .partners {
+        &__list {
+            justify-content: center;
+            gap: 12px;
+        }
+
+        &__item {
+            flex: 0 0 calc(20% - 12px); // 4 элемента в строке на мобильных
+            max-width: calc(20% - 12px);
+            min-width: 0;
+        }
+    }
+
+    .contacts-page__map {
+        width: 100% !important;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+
+        #yandex-map {
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box;
+        }
+
+        // Стили для контейнера карты Яндекс
+        & > div,
+        & > div > div {
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+    }
+
+    .order-specialist {
+        &__content {
+            align-items: flex-end;
+        }
+        &__image-wrapper {
+            flex: 0 0 250px;
+            margin-left: -30px;
+        }
+        &__title {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        &__checkbox-label {
+            font-size: 10px;
+        }
+        &__form-wrapper {
+            padding: 20px 0;
+        }
+    }
+
+    .price-table {
+        &__table-title {
+            font-size: 14px;
+            padding: 10px 16px;
+        }
+        &__table-list {
+            gap: 10px;
+        }
+    }
+}
+
+// Адаптивные стили для устройств 480px и меньше
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+    .page-wrapper {
+        background-position: -290px 580px;
+        background-size: 180% auto;
+    }
+
+    h1 {
+        font-size: 32px !important;
+        margin: 30px 0;
+    }
+    h2 {
+        font-size: 26px !important;
+        margin: 32px auto 20px;
+        max-width: 100%;
+    }
+
+    .section {
+        &__subtitle {
+            max-width: 100%;
+        }
+    }
+
+    .main .hero {
+        margin-top: 0 !important;
+        &__title {
+            width: 100% !important;
+            text-align: center;
+        }
+        &__description {
+            text-align: center;
+            margin: 20px auto;
+        }
+        &__link {
+            display: block;
+            text-align: center;
+        }
+        &__button {
+            width: 100%;
+            &__group {
+                gap: 12px;
+                flex-direction: column;
+            }
+        }
+        &__advantages {
+            flex-direction: column;
+            margin-top: 240px;
+        }
+        &__advantage {
+            justify-content: flex-start;
+            &-title {
+                font-size: 18px;
+            }
+            &:not(:last-child) {
+                border-right: none;
+                border-bottom: 1px solid #c9c9c9;
+            }
+        }
+    }
+    .cat-items,
+    .object-items {
+        gap: 12px;
+    }
+    .cat-item,
+    .object-item {
+        max-width: 48%;
+    }
+    .three-services {
+        &__content {
+            flex-direction: column;
+            gap: 12px;
+        }
+        &__column {
+            gap: 12px;
+            &--left,
+            &--right {
+                width: 100%;
+            }
+        }
+    }
+    .order-specialist {
+        &__content {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        &__image-wrapper {
+            width: 70%;
+            margin: 0;
+        }
+        &__fields {
+            flex-direction: column;
+            gap: 15px;
+        }
+        &__input {
+            width: 100%;
+            min-width: 100%;
+        }
+        &__button {
+            width: 100%;
+        }
+    }
+
+    .price-table {
+        &__section-title {
+            font-size: 24px;
+        }
+        &__row-title {
+            font-size: 14px;
+        }
+        &__price {
+            &--old {
+                font-size: 12px;
+            }
+            &--sale {
+                font-size: 16px;
+            }
+        }
+        &__table-list {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            overflow-x: auto;
+            overflow-y: hidden;
+            gap: 10px;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            width: 220%;
+            padding-bottom: 12px;
+            max-height: 120px;
+            align-content: flex-start;
+            justify-content: flex-start;
+
+            &::-webkit-scrollbar {
+                height: 6px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+                border-radius: 3px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: #105186;
+                border-radius: 3px;
+            }
+        }
+        &__table-title {
+            flex: 0 0 auto;
+            min-width: auto;
+            max-width: none;
+            box-sizing: border-box;
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+        &__tabs {
+            width: 100%;
+            overflow: scroll;
+        }
+    }
+
+    .legal-entities__content__side img {
+        max-width: 100%;
+    }
+
+    .risks {
+        &__list {
+            max-width: 100%;
+        }
+        &__item {
+            gap: 12px;
+            &-title {
+                font-size: 18px;
+            }
+            &-text {
+                font-size: 14px;
+            }
+        }
+    }
+    .licenses__image-wrapper {
+        max-width: 100%;
+    }
+    .licenses__content {
+        padding-top: 0;
+    }
+    .licenses__title {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+    .licenses__description {
+        font-size: 14px;
+    }
+    .licenses__link {
+        font-size: 14px;
+    }
+    .partners {
+        &__item {
+            flex: 0 0 calc(33.333% - 11px); // 3 элемента в строке на очень маленьких экранах
+            max-width: calc(33.333% - 11px);
+        }
+    }
+
+    .footer {
+        &__content {
+            flex-direction: column;
+            gap: 20px;
+        }
+        &__section {
+            &--contacts {
+                max-width: 100%;
+            }
+            &--nav {
+                flex-direction: row;
+            }
+        }
+        &__nav {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 12px;
+            &-link {
+                font-weight: 600;
+                font-size: 16px;
+            }
+        }
+        &__bottom {
+            padding-top: 0;
+            padding-bottom: 40px;
+        }
+        &__whatsapp {
+            font-size: 12px;
+            bottom: 16px;
+            right: 16px;
+            gap: 8px;
+            padding: 12px 16px;
+            &-icon {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    .callback-button {
+        display: none;
+    }
+
+    .modal__checkbox-label {
+        font-size: 12px;
+    }
+
+    // Кнопка в меню - показываем только на маленьких экранах
+    .nav__item--callback {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #e0e0e0;
+    }
+
+    .callback-button--menu {
+        display: block;
+        width: 100%;
+        margin: 0;
+        height: 52px;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 8px;
+        background-color: $blue-color;
+        color: $white-color;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+
+        &:hover {
+            background-color: darken($blue-color, 5%);
+            transform: translateY(-1px);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+
+    // Переключение слайдеров отзывов на мобильных
+    .reviews__slider--desktop {
+        display: none;
+    }
+
+    .reviews__slider--mobile {
+        display: block;
+    }
+
+    // Переключение слайдеров сертификатов на мобильных
+    .licenses__slider--desktop {
+        display: none;
+    }
+
+    .licenses__slider--mobile {
+        display: block;
+    }
+
+    .contacts-page__right {
+        grid-template-columns: 1fr;
+    }
+
+    .object-items {
+        gap: 10px;
+    }
+    .object-item {
+        flex: 0 0 calc(50% - 5px);
+        max-width: calc(50% - 5px);
+        margin: 5px 0;
+    }
+}
+
+// Адаптивные стили для устройств 375px и меньше
+@media (max-width: 375px) {
+    .modal {
+        padding: 30px 20px !important;
+    }
+    .page-wrapper {
+        background-position: -360px 640px;
+        background-size: 210% auto;
+    }
+
+    .cat-item,
+    .object-item {
+        max-width: 100%;
+    }
+
+    .medium-button {
+        max-width: 100%;
+    }
+
+    .order-specialist__image-wrapper {
+        width: 100%;
+        margin: 0;
+    }
+
+    .price-table__table-list {
+        width: 260%;
+    }
+}
+
+// Адаптивные стили для устройств 375px и меньше
+@media (max-width: 360px) {
+    .price-table__table-list {
+        width: 300%;
+    }
+    .price-table__row-prices {
+        gap: 4px;
+    }
+    .modal {
+        width: 95%;
+        &__title {
+            font-size: 24px;
+        }
+        &__description {
+            font-size: 14px;
+        }
+        &__form {
+            gap: 15px;
+        }
+        &__button {
+            font-size: 16px;
+        }
+        &__checkbox-label {
+            font-size: 10px;
+        }
+    }
+}

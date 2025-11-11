@@ -1,0 +1,21 @@
+{
+  "name": "gordes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compress-images": "node scripts/compress-images.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "material-icons": "^1.13.14",
+    "modern-normalize": "^3.0.1"
+  },
+  "devDependencies": {
+    "sass": "^1.93.3",
+    "sharp": "^0.33.0"
+  }
+}
