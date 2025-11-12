@@ -9,14 +9,65 @@
         <link rel="stylesheet" href="css/fonts.css" />
         <link rel="stylesheet" href="css/main.css" />
         <link rel="stylesheet" href="css/responsive.css" />
+        <link rel="stylesheet" href="css/preloader.css" />
 
         <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
         <link rel="shortcut icon" href="favicon/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
         <link rel="manifest" href="favicon/site.webmanifest" />
-</head>
+    </head>
     <body id="top">
+        <!-- Прелоадер -->
+        <div class="preloader">
+            <div class="preloader__logo">
+                <img src="images/logo.png" alt="logo" />
+            </div>
+        </div>
+        <!-- Фиксированная шапка для прокрутки -->
+        <header class="header-fixed">
+            <div class="container">
+                <nav class="nav">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="images/logo.png" alt="logo" class="logo__image" />
+                        </a>
+                    </div>
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Услуги</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Для бизнеса</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Цены</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Отзывы</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">О нас</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Контакты</a>
+                        </li>
+                        <li class="nav__item nav__item--callback">
+                            <button class="small-button callback-button callback-button--menu">Заказать обратный звонок</button>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="contacts">
+                    <a href="tel:88001018789" class="contacts__phone"><i class="material-icons">phone</i>8 (800) 101-87-89</a>
+                    <button class="small-button callback-button">Заказать обратный звонок</button>
+                    <button class="burger-menu" id="burgerMenuFixed" aria-label="Меню">
+                        <span class="burger-menu__line"></span>
+                        <span class="burger-menu__line"></span>
+                        <span class="burger-menu__line"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
         <div class="page-wrapper">
             <header class="header">
                 <div class="container">
@@ -1172,6 +1223,8 @@
         </div>
     </div>
 
+    <script src="js/preloader.js"></script>
+    <script src="js/header-scroll.js"></script>
     <script src="js/phone-mask.js"></script>
     <script src="js/reviews-slider-switch.js"></script>
     <script src="js/slider.js"></script>
