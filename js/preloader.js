@@ -14,12 +14,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         isHidden = true;
         
-        preloader.classList.add("hidden");
-        
-        // Удаляем прелоадер из DOM после анимации
-        setTimeout(function () {
-            preloader.remove();
-        }, 500);
+            preloader.classList.add("hidden");
+            
+            // Удаляем прелоадер из DOM после анимации
+            setTimeout(function () {
+                preloader.remove();
+            }, 500);
     }
 
     // Проверяем, загружено ли критическое изображение (логотип)

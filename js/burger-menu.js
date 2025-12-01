@@ -76,10 +76,16 @@ document.addEventListener('DOMContentLoaded', function() {
         closeMenu();
     });
 
-    // Закрытие меню по клику на ссылку в меню
+    // Закрытие меню по клику на ссылку в меню (кроме ссылок с выпадающим меню)
     const navLinks = navList.querySelectorAll('.nav__link');
     navLinks.forEach(function(link) {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function(e) {
+            // Не закрываем меню, если это ссылка с выпадающим меню (на мобильных)
+            const parentItem = link.closest('.nav__item--dropdown');
+            if (parentItem && window.innerWidth <= 768) {
+                // На мобильных не закрываем меню при клике на "Услуги"
+                return;
+            }
             closeMenu();
         });
     });

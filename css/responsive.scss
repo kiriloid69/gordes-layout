@@ -55,6 +55,20 @@ $blue-color: #105186;
         &__link {
             font-size: 16px;
         }
+
+        // Адаптация выпадающего меню для планшетов
+        &__dropdown {
+            min-width: 800px;
+            padding: 25px 30px;
+        }
+
+        &__dropdown-container {
+            gap: 30px;
+        }
+
+        &__dropdown-column {
+            min-width: 180px;
+        }
     }
 
     .cat-items {
@@ -311,9 +325,62 @@ $blue-color: #105186;
 
         &__item {
             width: 100%;
+            position: relative;
 
             &--callback {
                 display: none !important; // Скрываем кнопку в меню на экранах больше 480px
+            }
+
+            &--dropdown {
+                .nav__dropdown {
+                    position: static;
+                    width: 100%;
+                    min-width: auto;
+                    margin-top: 0;
+                    padding: 0;
+                    box-shadow: none;
+                    border-radius: 0;
+                    max-height: 0;
+                    overflow: hidden;
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(-10px);
+                    pointer-events: none;
+                    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, padding 0.3s ease;
+
+                    &::before {
+                        display: none;
+                    }
+
+                    &.active {
+                        max-height: 2000px;
+                        padding: 15px 0;
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateY(0);
+                        pointer-events: auto;
+                    }
+                }
+
+                .nav__dropdown-container {
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
+                .nav__dropdown-column {
+                    width: 100%;
+                }
+
+                .nav__dropdown-title {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    padding-bottom: 8px;
+                }
+
+                .nav__dropdown-link {
+                    font-size: 14px;
+                    padding: 4px 0;
+                }
             }
         }
 
@@ -322,6 +389,23 @@ $blue-color: #105186;
             padding: 10px 0;
             font-size: 18px;
             width: 100%;
+            position: relative;
+
+            // Стрелка для мобильного меню
+            .nav__item--dropdown &::after {
+                content: '+';
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 24px;
+                font-weight: 300;
+                transition: transform 0.3s ease;
+            }
+
+            .nav__item--dropdown.active &::after {
+                transform: translateY(-50%) rotate(45deg);
+            }
         }
     }
 

@@ -184,9 +184,21 @@ button {
     }
     &__item {
         list-style: none;
+        position: relative;
 
         &--callback {
             display: none; // Скрываем кнопку в меню на десктопе
+        }
+
+        &--dropdown {
+            // Удерживаем меню открытым при наведении на пункт или само меню
+            &:hover .nav__dropdown,
+            .nav__dropdown:hover {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+                pointer-events: auto;
+            }
         }
     }
     &__link {
@@ -195,8 +207,107 @@ button {
         font-size: $menu-font-size;
         font-weight: 600;
         line-height: 1.5;
+        transition: color 0.3s ease;
         &:hover {
             color: $blue-color;
+        }
+    }
+
+    // Выпадающее меню
+    &__dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transform: translateY(-20px);
+        background-color: $white-color;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+        padding: 30px 40px;
+        min-width: 900px;
+        margin-top: 15px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+        z-index: 1000;
+        pointer-events: none;
+
+        // Невидимая область сверху для легкого наведения (мост между пунктом и меню)
+        &::after {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -20px;
+            right: -20px;
+            height: 15px;
+            background: transparent;
+            pointer-events: auto;
+        }
+
+        // Стрелка вверху
+        &::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 20px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 8px solid $white-color;
+        }
+
+        // Меню остается открытым при наведении на него
+        &:hover {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+    }
+
+    &__dropdown-container {
+        display: flex;
+        gap: 40px;
+        justify-content: space-between;
+    }
+
+    &__dropdown-column {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    &__dropdown-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: $black-color;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid $blue-color;
+
+        &--mt {
+            margin-top: 25px;
+        }
+    }
+
+    &__dropdown-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__dropdown-link {
+        display: block;
+        text-decoration: none;
+        color: $black-color;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.8;
+        padding: 5px 0;
+        transition: color 0.3s ease, padding-left 0.3s ease;
+
+        &:hover {
+            color: $blue-color;
+            padding-left: 8px;
         }
     }
 }

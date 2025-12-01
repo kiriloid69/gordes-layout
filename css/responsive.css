@@ -40,6 +40,16 @@
   .nav__link {
     font-size: 16px;
   }
+  .nav__dropdown {
+    min-width: 800px;
+    padding: 25px 30px;
+  }
+  .nav__dropdown-container {
+    gap: 30px;
+  }
+  .nav__dropdown-column {
+    min-width: 180px;
+  }
   .cat-items {
     gap: 20px;
     justify-content: center;
@@ -231,15 +241,73 @@
   }
   .nav__item {
     width: 100%;
+    position: relative;
   }
   .nav__item--callback {
     display: none !important;
+  }
+  .nav__item--dropdown .nav__dropdown {
+    position: static;
+    width: 100%;
+    min-width: auto;
+    margin-top: 0;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, padding 0.3s ease;
+  }
+  .nav__item--dropdown .nav__dropdown::before {
+    display: none;
+  }
+  .nav__item--dropdown .nav__dropdown.active {
+    max-height: 2000px;
+    padding: 15px 0;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .nav__item--dropdown .nav__dropdown-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .nav__item--dropdown .nav__dropdown-column {
+    width: 100%;
+  }
+  .nav__item--dropdown .nav__dropdown-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+  }
+  .nav__item--dropdown .nav__dropdown-link {
+    font-size: 14px;
+    padding: 4px 0;
   }
   .nav__link {
     display: block;
     padding: 10px 0;
     font-size: 18px;
     width: 100%;
+    position: relative;
+  }
+  .nav__item--dropdown .nav__link::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+  }
+  .nav__item--dropdown.active .nav__link::after {
+    transform: translateY(-50%) rotate(45deg);
   }
   .contacts-page__content {
     grid-template-columns: 1fr;

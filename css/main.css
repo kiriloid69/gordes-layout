@@ -196,8 +196,7 @@ button.yellow-button {
 .logo img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .nav {
@@ -215,9 +214,17 @@ button.yellow-button {
 }
 .nav__item {
   list-style: none;
+  position: relative;
 }
 .nav__item--callback {
   display: none;
+}
+.nav__item--dropdown:hover .nav__dropdown,
+.nav__item--dropdown .nav__dropdown:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 .nav__link {
   text-decoration: none;
@@ -225,15 +232,102 @@ button.yellow-button {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.5;
+  transition: color 0.3s ease;
 }
 .nav__link:hover {
   color: #105186;
+}
+.nav__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translateY(-20px);
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 30px 40px;
+  min-width: 900px;
+  margin-top: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  z-index: 1000;
+  pointer-events: none;
+}
+.nav__dropdown::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -20px;
+  right: -20px;
+  height: 15px;
+  background: transparent;
+  pointer-events: auto;
+}
+.nav__dropdown::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #ffffff;
+}
+.nav__dropdown:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.nav__dropdown-container {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+.nav__dropdown-column {
+  flex: 1;
+  min-width: 200px;
+}
+.nav__dropdown-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #151515;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #105186;
+}
+.nav__dropdown-title--mt {
+  margin-top: 25px;
+}
+.nav__dropdown-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav__dropdown-link {
+  display: block;
+  text-decoration: none;
+  color: #151515;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8;
+  padding: 5px 0;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+.nav__dropdown-link:hover {
+  color: #105186;
+  padding-left: 8px;
 }
 
 .contacts {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+.contacts__phone i {
+  color: #105186;
 }
 .contacts__phone {
   display: flex;
@@ -244,9 +338,6 @@ button.yellow-button {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
-}
-.contacts__phone i {
-  color: #105186;
 }
 
 .burger-menu {
@@ -480,8 +571,7 @@ section {
 .cat-item__image {
   display: flex;
   margin: 8px auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   flex-shrink: 0;
   transition: transform 0.3s ease;
 }
@@ -545,21 +635,18 @@ section {
   flex-shrink: 0;
   width: 68px;
   height: 68px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .three-services__image {
   flex-shrink: 0;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 5px;
 }
 .three-services__main-image {
   width: 100%;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 5px;
 }
 .three-services__content-text {
@@ -611,8 +698,7 @@ section {
 .garancy__icon {
   width: 100px;
   height: 10 0px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .garancy__text {
   font-size: 16px;
@@ -680,9 +766,6 @@ section {
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-.order-specialist__input::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.5);
-}
 .order-specialist__input::placeholder {
   color: rgba(0, 0, 0, 0.5);
 }
@@ -712,7 +795,7 @@ section {
 .order-specialist__button:hover:not(:disabled) {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  background-color: #0d436f;
+  background-color: rgb(13.28, 67.23, 111.22);
 }
 .order-specialist__button:active:not(:disabled) {
   transform: translateY(0);
@@ -956,8 +1039,7 @@ section {
 .risks__item-img img {
   max-width: 100%;
   max-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .risks__item-content {
   flex: 1;
@@ -1014,8 +1096,7 @@ section {
 .object-item__image {
   display: flex;
   margin: 8px auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   width: 70%;
   height: auto;
   transition: transform 0.3s ease;
@@ -1131,7 +1212,7 @@ section {
   display: inline-block;
 }
 .licenses__link:hover {
-  color: #0b3558;
+  color: rgb(10.56, 53.46, 88.44);
 }
 .licenses__list {
   display: flex;
@@ -1198,8 +1279,7 @@ section {
   width: auto;
   height: auto;
   max-height: 500px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   display: block;
   box-sizing: border-box;
 }
@@ -1307,8 +1387,7 @@ section {
 .lightbox__image {
   max-width: 100%;
   max-height: 90vh;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   border-radius: 8px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
@@ -1543,8 +1622,7 @@ section {
 .footer__whatsapp-icon {
   width: 36px;
   height: 36px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .modal-overlay {
@@ -1646,9 +1724,6 @@ section {
   outline: none;
   border-color: #105186;
 }
-.modal__input::-moz-placeholder {
-  color: #999;
-}
 .modal__input::placeholder {
   color: #999;
 }
@@ -1665,7 +1740,7 @@ section {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .modal__button:hover:not(:disabled) {
-  background-color: #0d436f;
+  background-color: rgb(13.28, 67.23, 111.22);
   transform: translateY(-2px);
 }
 .modal__button:disabled {
@@ -1681,9 +1756,7 @@ section {
   line-height: 1.5;
 }
 .modal__checkbox {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   width: 20px;
   height: 20px;
   border: 2px solid #c9c9c9;
@@ -1722,7 +1795,7 @@ section {
   transition: color 0.3s ease;
 }
 .modal__link:hover {
-  color: #0b3558;
+  color: rgb(10.56, 53.46, 88.44);
 }
 
 .contacts-page {
@@ -1817,4 +1890,6 @@ section {
   font-size: 16px;
   line-height: 1.5;
   color: #151515;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
