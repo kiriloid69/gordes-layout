@@ -196,7 +196,8 @@ button.yellow-button {
 .logo img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .nav {
@@ -326,9 +327,6 @@ button.yellow-button {
   align-items: center;
   gap: 20px;
 }
-.contacts__phone i {
-  color: #105186;
-}
 .contacts__phone {
   display: flex;
   align-items: center;
@@ -338,6 +336,9 @@ button.yellow-button {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
+}
+.contacts__phone i {
+  color: #105186;
 }
 
 .burger-menu {
@@ -571,7 +572,8 @@ section {
 .cat-item__image {
   display: flex;
   margin: 8px auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   flex-shrink: 0;
   transition: transform 0.3s ease;
 }
@@ -635,18 +637,21 @@ section {
   flex-shrink: 0;
   width: 68px;
   height: 68px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .three-services__image {
   flex-shrink: 0;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 5px;
 }
 .three-services__main-image {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 5px;
 }
 .three-services__content-text {
@@ -698,7 +703,8 @@ section {
 .garancy__icon {
   width: 100px;
   height: 10 0px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .garancy__text {
   font-size: 16px;
@@ -766,6 +772,9 @@ section {
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+.order-specialist__input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
 .order-specialist__input::placeholder {
   color: rgba(0, 0, 0, 0.5);
 }
@@ -795,7 +804,7 @@ section {
 .order-specialist__button:hover:not(:disabled) {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  background-color: rgb(13.28, 67.23, 111.22);
+  background-color: #0d436f;
 }
 .order-specialist__button:active:not(:disabled) {
   transform: translateY(0);
@@ -1039,7 +1048,8 @@ section {
 .risks__item-img img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .risks__item-content {
   flex: 1;
@@ -1096,7 +1106,8 @@ section {
 .object-item__image {
   display: flex;
   margin: 8px auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 70%;
   height: auto;
   transition: transform 0.3s ease;
@@ -1212,7 +1223,7 @@ section {
   display: inline-block;
 }
 .licenses__link:hover {
-  color: rgb(10.56, 53.46, 88.44);
+  color: #0b3558;
 }
 .licenses__list {
   display: flex;
@@ -1279,7 +1290,8 @@ section {
   width: auto;
   height: auto;
   max-height: 500px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
   box-sizing: border-box;
 }
@@ -1387,7 +1399,8 @@ section {
 .lightbox__image {
   max-width: 100%;
   max-height: 90vh;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: 8px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
@@ -1622,7 +1635,8 @@ section {
 .footer__whatsapp-icon {
   width: 36px;
   height: 36px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .modal-overlay {
@@ -1724,6 +1738,9 @@ section {
   outline: none;
   border-color: #105186;
 }
+.modal__input::-moz-placeholder {
+  color: #999;
+}
 .modal__input::placeholder {
   color: #999;
 }
@@ -1740,7 +1757,7 @@ section {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .modal__button:hover:not(:disabled) {
-  background-color: rgb(13.28, 67.23, 111.22);
+  background-color: #0d436f;
   transform: translateY(-2px);
 }
 .modal__button:disabled {
@@ -1756,7 +1773,9 @@ section {
   line-height: 1.5;
 }
 .modal__checkbox {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   width: 20px;
   height: 20px;
   border: 2px solid #c9c9c9;
@@ -1795,7 +1814,7 @@ section {
   transition: color 0.3s ease;
 }
 .modal__link:hover {
-  color: rgb(10.56, 53.46, 88.44);
+  color: #0b3558;
 }
 
 .contacts-page {
@@ -1892,4 +1911,132 @@ section {
   color: #151515;
 }
 
-/*# sourceMappingURL=main.css.map */
+.about-company {
+  background-color: #ffffff;
+}
+.about-company__title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #105186;
+  text-align: center;
+  margin-bottom: 50px;
+  line-height: 1.3;
+}
+.about-company__tabs {
+  margin-bottom: 40px;
+}
+.about-company__nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.about-company__nav-item {
+  padding: 12px 24px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #151515;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  white-space: nowrap;
+}
+.about-company__nav-item:hover {
+  background-color: #e8e8e8;
+}
+.about-company__nav-item.active {
+  background-color: #105186;
+  color: #ffffff;
+  border-color: #105186;
+}
+.about-company__content {
+  width: 100%;
+}
+.about-company__item {
+  display: none;
+  padding: 0;
+  background-color: #ffffff;
+  width: 100%;
+}
+.about-company__item.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+.about-company__item p {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #151515;
+  margin-bottom: 20px;
+}
+.about-company__item p strong {
+  font-weight: 600;
+  color: #151515;
+}
+.about-company__item ul {
+  margin: 20px 0;
+  padding-left: 25px;
+  list-style: disc;
+}
+.about-company__item ul li {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #151515;
+  margin-bottom: 10px;
+}
+.about-company__item a {
+  color: #105186;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+.about-company__item a:hover {
+  color: #0b3558;
+}
+.about-company__team {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+.about-company__team-member {
+  flex: 0 0 calc(33.333% - 14px);
+  max-width: calc(33.333% - 14px);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.about-company__team-member img {
+  width: 100%;
+  height: 360px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 8px;
+}
+.about-company__team-member-info {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #151515;
+  text-align: center;
+}
+.about-company__team-member-info b {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=main.css.map */

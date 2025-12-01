@@ -71,6 +71,26 @@ $blue-color: #105186;
         }
     }
 
+    .about-company {
+        &__title {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        &__tabs {
+            margin-bottom: 30px;
+        }
+
+        &__nav {
+            gap: 12px;
+        }
+
+        &__nav-item {
+            padding: 10px 20px;
+            font-size: 15px;
+        }
+    }
+
     .cat-items {
         gap: 20px;
         justify-content: center;
@@ -405,6 +425,53 @@ $blue-color: #105186;
 
             .nav__item--dropdown.active &::after {
                 transform: translateY(-50%) rotate(45deg);
+            }
+        }
+    }
+
+    .about-company {
+
+        &__title {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        &__tabs {
+            margin-bottom: 30px;
+        }
+
+        &__nav {
+            gap: 10px;
+        }
+
+        &__nav-item {
+            padding: 10px 16px;
+            font-size: 14px;
+        }
+
+        &__team {
+            flex-direction: row;
+            gap: 30px;
+        }
+
+        &__team-member {
+            flex: 1;
+            max-width: 100%;
+            width: 100%;
+
+            img {
+                height: auto;
+                max-height: 400px;
+            }
+        }
+
+        &__item {
+            p {
+                font-size: 15px;
+            }
+
+            ul li {
+                font-size: 15px;
             }
         }
     }
@@ -974,6 +1041,83 @@ $blue-color: #105186;
 
     .licenses__slider--mobile {
         display: block;
+    }
+
+    .about-company {
+        padding: 0;
+
+        &__title {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        &__tabs {
+            margin-bottom: 20px;
+        }
+
+        &__nav {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            overflow-x: auto;
+            overflow-y: hidden;
+            gap: 10px;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            width: 100%;
+            padding-bottom: 12px;
+            justify-content: flex-start;
+
+            &::-webkit-scrollbar {
+                height: 6px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+                border-radius: 3px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: $blue-color;
+                border-radius: 3px;
+            }
+        }
+
+        &__nav-item {
+            flex: 0 0 auto;
+            min-width: auto;
+            max-width: none;
+            box-sizing: border-box;
+            flex-shrink: 0;
+            white-space: nowrap;
+            font-size: 14px;
+            padding: 10px 16px;
+        }
+
+        &__item {
+            p {
+                font-size: 14px;
+            }
+
+            ul li {
+                font-size: 14px;
+            }
+        }
+
+        &__team {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__team-member {
+            img {
+                max-height: 400px;
+            }
+
+            &-info {
+                font-size: 13px;
+            }
+        }
     }
 
     .contacts-page__right {

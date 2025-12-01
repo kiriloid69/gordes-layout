@@ -50,6 +50,20 @@
   .nav__dropdown-column {
     min-width: 180px;
   }
+  .about-company__title {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  .about-company__tabs {
+    margin-bottom: 30px;
+  }
+  .about-company__nav {
+    gap: 12px;
+  }
+  .about-company__nav-item {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
   .cat-items {
     gap: 20px;
     justify-content: center;
@@ -308,6 +322,39 @@
   }
   .nav__item--dropdown.active .nav__link::after {
     transform: translateY(-50%) rotate(45deg);
+  }
+  .about-company__title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  .about-company__tabs {
+    margin-bottom: 30px;
+  }
+  .about-company__nav {
+    gap: 10px;
+  }
+  .about-company__nav-item {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+  .about-company__team {
+    flex-direction: row;
+    gap: 30px;
+  }
+  .about-company__team-member {
+    flex: 1;
+    max-width: 100%;
+    width: 100%;
+  }
+  .about-company__team-member img {
+    height: auto;
+    max-height: 400px;
+  }
+  .about-company__item p {
+    font-size: 15px;
+  }
+  .about-company__item ul li {
+    font-size: 15px;
   }
   .contacts-page__content {
     grid-template-columns: 1fr;
@@ -778,6 +825,66 @@
   }
   .licenses__slider--mobile {
     display: block;
+  }
+  .about-company {
+    padding: 0;
+  }
+  .about-company__title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .about-company__tabs {
+    margin-bottom: 20px;
+  }
+  .about-company__nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 10px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    width: 100%;
+    padding-bottom: 12px;
+    justify-content: flex-start;
+  }
+  .about-company__nav::-webkit-scrollbar {
+    height: 6px;
+  }
+  .about-company__nav::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+  }
+  .about-company__nav::-webkit-scrollbar-thumb {
+    background: #105186;
+    border-radius: 3px;
+  }
+  .about-company__nav-item {
+    flex: 0 0 auto;
+    min-width: auto;
+    max-width: none;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    white-space: nowrap;
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+  .about-company__item p {
+    font-size: 14px;
+  }
+  .about-company__item ul li {
+    font-size: 14px;
+  }
+  .about-company__team {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .about-company__team-member img {
+    max-height: 400px;
+  }
+  .about-company__team-member-info {
+    font-size: 13px;
   }
   .contacts-page__right {
     grid-template-columns: 1fr;
