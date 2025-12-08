@@ -888,6 +888,96 @@ section {
 .price-table__tabs {
   margin-bottom: 30px;
 }
+.price-table__dropdown {
+  display: none;
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.price-table__dropdown-button {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #151515;
+  background-color: #f5f5f5;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+.price-table__dropdown-button:hover {
+  background-color: #e8e8e8;
+}
+.price-table__dropdown-button:focus {
+  outline: none;
+  border-color: #105186;
+}
+.price-table__dropdown-button.active {
+  border-color: #105186;
+  background-color: #e8e8e8;
+}
+.price-table__dropdown-button.active .price-table__dropdown-arrow {
+  transform: rotate(180deg);
+}
+.price-table__dropdown-text {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.price-table__dropdown-arrow {
+  flex-shrink: 0;
+  margin-left: 12px;
+  transition: transform 0.3s ease;
+}
+.price-table__dropdown-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  list-style: none;
+  padding: 8px 0;
+  margin-left: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.price-table__dropdown-list.active {
+  display: block;
+}
+.price-table__dropdown-item {
+  padding: 12px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #151515;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+.price-table__dropdown-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+  right: 16px;
+  height: 1px;
+  background-color: #e0e0e0;
+}
+.price-table__dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+.price-table__dropdown-item:active {
+  background-color: #e8e8e8;
+}
 .price-table__table-list {
   display: flex;
   justify-content: center;

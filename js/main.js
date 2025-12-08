@@ -82,33 +82,99 @@ document.addEventListener('DOMContentLoaded', function() {
     // Переключение табов в price-table
     const tabTitles = document.querySelectorAll('.price-table__table-title');
     const contentItems = document.querySelectorAll('.price-table__content-item');
+    const dropdownButton = document.getElementById('price-table-dropdown-button');
+    const dropdownList = document.getElementById('price-table-dropdown-list');
+    const dropdownItems = document.querySelectorAll('.price-table__dropdown-item');
+    const dropdownText = dropdownButton ? dropdownButton.querySelector('.price-table__dropdown-text') : null;
 
+    // Функция для переключения таба
+    function switchTab(tabIndex) {
+        // Убираем активный класс со всех табов
+        tabTitles.forEach(function(t) {
+            t.classList.remove('active');
+        });
+
+        // Убираем активный класс со всего контента
+        contentItems.forEach(function(item) {
+            item.classList.remove('active');
+        });
+
+        // Добавляем активный класс к выбранному табу
+        const selectedTab = document.querySelector(`.price-table__table-title[data-tab="${tabIndex}"]`);
+        if (selectedTab) {
+            selectedTab.classList.add('active');
+        }
+
+        // Обновляем текст в dropdown кнопке
+        const selectedDropdownItem = document.querySelector(`.price-table__dropdown-item[data-tab="${tabIndex}"]`);
+        if (selectedDropdownItem && dropdownText) {
+            dropdownText.textContent = selectedDropdownItem.textContent;
+        }
+
+        // Закрываем dropdown
+        if (dropdownButton && dropdownList) {
+            dropdownButton.classList.remove('active');
+            dropdownList.classList.remove('active');
+        }
+
+        // Показываем соответствующий контент
+        const targetContent = document.querySelector(`.price-table__content-item[data-content="${tabIndex}"]`);
+        if (targetContent) {
+            targetContent.classList.add('active');
+        }
+    }
+
+    // Обработчик для кликов по табам
     if (tabTitles.length > 0 && contentItems.length > 0) {
         tabTitles.forEach(function(tab) {
             tab.addEventListener('click', function() {
                 const tabIndex = this.getAttribute('data-tab');
-
-                // Убираем активный класс со всех табов
-                tabTitles.forEach(function(t) {
-                    t.classList.remove('active');
-                });
-
-                // Убираем активный класс со всего контента
-                contentItems.forEach(function(item) {
-                    item.classList.remove('active');
-                });
-
-                // Добавляем активный класс к выбранному табу
-                this.classList.add('active');
-
-                // Показываем соответствующий контент
-                const targetContent = document.querySelector(`.price-table__content-item[data-content="${tabIndex}"]`);
-                if (targetContent) {
-                    targetContent.classList.add('active');
-                }
+                switchTab(tabIndex);
             });
         });
     }
+
+    // Обработчик для кнопки dropdown
+    if (dropdownButton && dropdownList) {
+        dropdownButton.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isActive = this.classList.contains('active');
+            
+            // Закрываем все открытые dropdown
+            document.querySelectorAll('.price-table__dropdown-button').forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            document.querySelectorAll('.price-table__dropdown-list').forEach(function(list) {
+                list.classList.remove('active');
+            });
+
+            // Открываем/закрываем текущий dropdown
+            if (!isActive) {
+                this.classList.add('active');
+                dropdownList.classList.add('active');
+            }
+        });
+    }
+
+    // Обработчик для элементов dropdown
+    if (dropdownItems.length > 0 && contentItems.length > 0) {
+        dropdownItems.forEach(function(item) {
+            item.addEventListener('click', function() {
+                const tabIndex = this.getAttribute('data-tab');
+                switchTab(tabIndex);
+            });
+        });
+    }
+
+    // Закрытие dropdown при клике вне его
+    document.addEventListener('click', function(e) {
+        if (dropdownButton && dropdownList && 
+            !dropdownButton.contains(e.target) && 
+            !dropdownList.contains(e.target)) {
+            dropdownButton.classList.remove('active');
+            dropdownList.classList.remove('active');
+        }
+    });
 
     // Синхронизация высоты кнопок в каждом ряду cat-items
     function syncButtonHeights() {

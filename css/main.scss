@@ -953,6 +953,110 @@ section {
         margin-bottom: 30px;
     }
 
+    &__dropdown {
+        display: none;
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    &__dropdown-button {
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 16px;
+        font-weight: 500;
+        color: $black-color;
+        background-color: #f5f5f5;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s ease;
+        text-align: left;
+
+        &:hover {
+            background-color: #e8e8e8;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: $blue-color;
+        }
+
+        &.active {
+            border-color: $blue-color;
+            background-color: #e8e8e8;
+
+            .price-table__dropdown-arrow {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__dropdown-text {
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__dropdown-arrow {
+        flex-shrink: 0;
+        margin-left: 12px;
+        transition: transform 0.3s ease;
+    }
+
+    &__dropdown-list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        margin-top: 4px;
+        background-color: $white-color;
+        border: 2px solid #e0e0e0;
+        border-radius: 5px;
+        list-style: none;
+        padding: 8px 0;
+        margin-left: 0;
+        z-index: 100;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &__dropdown-item {
+        padding: 12px 16px;
+        font-size: 16px;
+        font-weight: 500;
+        color: $black-color;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        position: relative;
+
+        &:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 16px;
+            right: 16px;
+            height: 1px;
+            background-color: #e0e0e0;
+        }
+
+        &:hover {
+            background-color: #f5f5f5;
+        }
+
+        &:active {
+            background-color: #e8e8e8;
+        }
+    }
+
     &__table-list {
         display: flex;
         justify-content: center;

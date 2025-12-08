@@ -675,43 +675,19 @@
   .price-table__price--sale {
     font-size: 16px;
   }
+  .price-table__dropdown {
+    display: block;
+  }
   .price-table__table-list {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    overflow-x: auto;
-    overflow-y: hidden;
-    gap: 10px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
-    width: 220%;
-    padding-bottom: 12px;
-    max-height: 120px;
-    align-content: flex-start;
-    justify-content: flex-start;
-  }
-  .price-table__table-list::-webkit-scrollbar {
-    height: 6px;
-  }
-  .price-table__table-list::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 3px;
-  }
-  .price-table__table-list::-webkit-scrollbar-thumb {
-    background: #105186;
-    border-radius: 3px;
+    display: none;
   }
   .price-table__table-title {
-    flex: 0 0 auto;
+    flex: 1;
     min-width: auto;
     max-width: none;
     box-sizing: border-box;
     flex-shrink: 0;
     white-space: nowrap;
-  }
-  .price-table__tabs {
-    width: 100%;
-    overflow: scroll;
   }
   .legal-entities__content__side img {
     max-width: 100%;
@@ -917,14 +893,8 @@
     width: 100%;
     margin: 0;
   }
-  .price-table__table-list {
-    width: 260%;
-  }
 }
 @media (max-width: 360px) {
-  .price-table__table-list {
-    width: 300%;
-  }
   .price-table__row-prices {
     gap: 4px;
   }
