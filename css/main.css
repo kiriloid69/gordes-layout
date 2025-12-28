@@ -1700,6 +1700,60 @@ section {
 .footer__legal p {
   margin: 5px 0;
 }
+.footer__messengers {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  color: #151515;
+  padding: 12px 16px;
+  border-radius: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+.footer__messengers:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+.footer__messengers-text {
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.footer__messengers-buttons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.footer__messenger-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.footer__messenger-btn:hover {
+  transform: scale(1.1);
+  background-color: rgba(16, 81, 134, 0.1);
+}
+.footer__messenger-icon {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  max-width: 28px;
+  max-height: 28px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+}
 .footer__whatsapp {
   position: fixed;
   bottom: 30px;

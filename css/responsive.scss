@@ -951,6 +951,32 @@ $blue-color: #105186;
             padding-top: 0;
             padding-bottom: 40px;
         }
+        &__messengers {
+            bottom: 16px;
+            right: 16px;
+            gap: 8px;
+            padding: 10px 14px;
+        }
+
+        &__messengers-text {
+            font-size: 12px;
+        }
+
+        &__messenger-btn {
+            width: 36px;
+            height: 36px;
+        }
+
+        &__messenger-icon {
+            width: 24px;
+            height: 24px;
+            min-width: 24px;
+            min-height: 24px;
+            max-width: 24px;
+            max-height: 24px;
+        }
+
+        // Старые стили для обратной совместимости
         &__whatsapp {
             font-size: 12px;
             bottom: 16px;
