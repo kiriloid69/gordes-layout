@@ -1738,10 +1738,12 @@ section {
         flex: 1;
 
         &--contacts {
-            max-width: 350px;
+            // max-width: 350px;
+            flex: 1;
         }
 
         &--nav {
+            flex: 2;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1749,6 +1751,7 @@ section {
         }
 
         &--top {
+            flex: 1;
             display: flex;
             justify-content: flex-end;
             align-items: flex-start;
@@ -1795,6 +1798,21 @@ section {
 
         &:hover {
             color: $yellow-color;
+        }
+    }
+
+    &__interlinks {
+        & a {
+            font-size: 14px;
+            display: block;
+            margin-bottom: 4px;
+            transition: .3s ease;
+            text-decoration: none;
+            color: $white-color;
+            &:hover {
+                color: $yellow-color;
+                transition: .3s ease;
+            }
         }
     }
 

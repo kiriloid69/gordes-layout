@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
+    <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Единая городская санитарная служба дезинфекции в Москве</title>
@@ -257,7 +257,10 @@
                                         <img src="images/advantage-1.png" alt="advantage-1" />
                                     </div>
                                     <div class="hero__advantage-text">
-                                        <h3 class="hero__advantage-title">Без вреда <br> для детей и животных</h3>
+                                        <h3 class="hero__advantage-title">
+                                            Без вреда <br />
+                                            для детей и животных
+                                        </h3>
                                     </div>
                                 </div>
                                 <div class="hero__advantage">
@@ -265,7 +268,10 @@
                                         <img src="images/advantage-2.png" alt="advantage-2" />
                                     </div>
                                     <div class="hero__advantage-text">
-                                        <h3 class="hero__advantage-title">Одобрено  <br> Роспотребнадзором</h3>
+                                        <h3 class="hero__advantage-title">
+                                            Одобрено <br />
+                                            Роспотребнадзором
+                                        </h3>
                                     </div>
                                 </div>
                                 <div class="hero__advantage">
@@ -273,7 +279,10 @@
                                         <img src="images/advantage-3.png" alt="advantage-3" />
                                     </div>
                                     <div class="hero__advantage-text">
-                                        <h3 class="hero__advantage-title">Гарантия <br> по договору</h3>
+                                        <h3 class="hero__advantage-title">
+                                            Гарантия <br />
+                                            по договору
+                                        </h3>
                                     </div>
                                 </div>
                             </div>
@@ -529,7 +538,7 @@
                             <button class="price-table__dropdown-button" type="button" id="price-table-dropdown-button">
                                 <span class="price-table__dropdown-text">Уничтожение насекомых</span>
                                 <svg class="price-table__dropdown-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.41 8.59L12 13.17L16.59 8.59L18 10L12 16L6 10L7.41 8.59Z" fill="#105186"/>
+                                    <path d="M7.41 8.59L12 13.17L16.59 8.59L18 10L12 16L6 10L7.41 8.59Z" fill="#105186" />
                                 </svg>
                             </button>
                             <ul class="price-table__dropdown-list" id="price-table-dropdown-list">
@@ -1312,6 +1321,18 @@
                             <a href="#" class="footer__nav-link">Отзывы</a>
                             <a href="#" class="footer__nav-link">Контакты</a>
                         </nav>
+                        <nav class="footer__interlinks" style="color: white; margin-top: 1rem">
+                            <a href="https://vladimir.gordes1.ru/dezinfekciya/dezinfekciya-gribka/" class="footer__interlink-link" > Дезинфекция от грибка в Владимире, избавление ванн, стен, белья от грибка </a>
+                            <a href="https://zheleznodorozhnyj.gordes1.ru/deratizaciya/unichtozhenie-krys/" class="footer__interlink-link" > Служба по уничтожению крыс в Железнодорожном </a>
+                            <a href="https://elecz.gordes1.ru/dezinfekciya/dezinfekciya-kulera/" class="footer__interlink-link" > Дезинфекция кулера для воды в Ельце </a>
+                            <a href="https://orehovo-zuevo.gordes1.ru/demerkurizaciya/" class="footer__interlink-link" > Демеркуризация помещений в Орехово-Зуеве </a>
+                            <a href="https://usman.gordes1.ru/dezinfekciya/dezodoraciya-pomeshcheniya/" class="footer__interlink-link" > Дезодорация воздуха помещения, квартиры в Усмани </a>
+                            <a href="https://chehov.gordes1.ru/" class="footer__interlink-link" > Единая городская санитарная служба дезинфекции Чехове </a>
+                            <a href="https://krasnodar.gordes1.ru/dezinfekciya/unichtozhenie-pleseni/" class="footer__interlink-link" > Уничтожение, дезинфекция от плесени в квартире в Краснодаре </a>
+                            <a href="https://vladimir.gordes1.ru/obrabotka-sada/unichtozhit-zemleroek-na-uchastke/" class="footer__interlink-link" > Уничтожить землероек на участке в Владимире </a>
+                            <a href="https://elektrostal.gordes1.ru/dezinfekciya/dezinfekciya-gribka/" class="footer__interlink-link" > Дезинфекция от грибка в Электростали, избавление ванн, стен, белья от грибка </a>
+                            <a href="https://stupino.gordes1.ru/dezinfekciya/dezinfekciya-ot-tuberkuleza/" class="footer__interlink-link" > Дезинфекция помещения, квартиры от туберкулеза в Ступине </a>
+                        </nav> 
                         <!-- <a href="#" class="footer__city-link">Выберите город</a> -->
                     </div>
                     <div class="footer__section footer__section--top">
@@ -1345,36 +1366,39 @@
             </div>
         </footer>
 
-    <!-- Модальное окно формы -->
-    <div class="modal-overlay" id="orderModal">
-        <div class="modal">
-            <button class="modal__close" aria-label="Закрыть">
-                <i class="material-icons">close</i>
-            </button>
-            <h2 class="modal__title">Оставить заявку</h2>
-            <p class="modal__description">Оставьте номер телефона и мы свяжемся с вами в ближайшее время для уточнения деталей вашего заказа и проконсультируем по всем вопросам</p>
-            <form class="modal__form" action="#" method="post">
-                <div class="modal__fields">
-                    <input type="tel" name="phone" class="modal__input" id="modalPhone" placeholder="Введите ваш телефон" required />
-                    <input type="text" name="name" class="modal__input" id="modalName" placeholder="Ваше имя" required />
-                    <button type="submit" class="modal__button" disabled>Избавиться от вредителей</button>
-                </div>
-                <label class="modal__checkbox-label">
-                    <input type="checkbox" name="consent" class="modal__checkbox" checked required />
-                    <span class="modal__checkbox-text">Отправляя заявку вы подтверждаете <a href="downloads/politika-obrabotki-dannyj.docx" target="_blank" rel="noopener noreferrer" class="modal__link">передачу персональных данных</a> и даете свое согласие на <a href="downloads/politika-obrabotki-dannyj.docx" target="_blank" rel="noopener noreferrer" class="modal__link">обработку и использование оператором ваших персональных данных</a>.</span>
-                </label>
-            </form>
+        <!-- Модальное окно формы -->
+        <div class="modal-overlay" id="orderModal">
+            <div class="modal">
+                <button class="modal__close" aria-label="Закрыть">
+                    <i class="material-icons">close</i>
+                </button>
+                <h2 class="modal__title">Оставить заявку</h2>
+                <p class="modal__description">Оставьте номер телефона и мы свяжемся с вами в ближайшее время для уточнения деталей вашего заказа и проконсультируем по всем вопросам</p>
+                <form class="modal__form" action="#" method="post">
+                    <div class="modal__fields">
+                        <input type="tel" name="phone" class="modal__input" id="modalPhone" placeholder="Введите ваш телефон" required />
+                        <input type="text" name="name" class="modal__input" id="modalName" placeholder="Ваше имя" required />
+                        <button type="submit" class="modal__button" disabled>Избавиться от вредителей</button>
+                    </div>
+                    <label class="modal__checkbox-label">
+                        <input type="checkbox" name="consent" class="modal__checkbox" checked required />
+                        <span class="modal__checkbox-text"
+                            >Отправляя заявку вы подтверждаете <a href="downloads/politika-obrabotki-dannyj.docx" target="_blank" rel="noopener noreferrer" class="modal__link">передачу персональных данных</a> и даете свое согласие на
+                            <a href="downloads/politika-obrabotki-dannyj.docx" target="_blank" rel="noopener noreferrer" class="modal__link">обработку и использование оператором ваших персональных данных</a>.</span
+                        >
+                    </label>
+                </form>
+            </div>
         </div>
-    </div>
 
-    <script src="js/preloader.js"></script>
-    <script src="js/header-scroll.js"></script>
-    <script src="js/dropdown-menu.js"></script>
-    <script src="js/phone-mask.js"></script>
-    <script src="js/reviews-slider-switch.js"></script>
-    <script src="js/slider.js"></script>
-    <script src="js/burger-menu.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/modal.js"></script>
-</body>
+        <script src="js/preloader.js"></script>
+        <script src="js/header-scroll.js"></script>
+        <script src="js/dropdown-menu.js"></script>
+        <script src="js/phone-mask.js"></script>
+        <script src="js/reviews-slider-switch.js"></script>
+        <script src="js/slider.js"></script>
+        <script src="js/burger-menu.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/modal.js"></script>
+    </body>
 </html>

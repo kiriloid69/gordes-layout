@@ -1574,15 +1574,17 @@ section {
   flex: 1;
 }
 .footer__section--contacts {
-  max-width: 350px;
+  flex: 1;
 }
 .footer__section--nav {
+  flex: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
 .footer__section--top {
+  flex: 1;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
@@ -1622,6 +1624,18 @@ section {
 }
 .footer__link:hover {
   color: #f4d76f;
+}
+.footer__interlinks a {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 4px;
+  transition: 0.3s ease;
+  text-decoration: none;
+  color: #ffffff;
+}
+.footer__interlinks a:hover {
+  color: #f4d76f;
+  transition: 0.3s ease;
 }
 .footer__note {
   color: rgba(255, 255, 255, 0.6);
