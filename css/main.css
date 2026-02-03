@@ -1589,10 +1589,7 @@ section {
 }
 .footer-links__list li {
   margin-bottom: 12px;
-  line-height: 1.5;
-}
-.footer-links__list li:last-of-type {
-  margin-bottom: 0;
+  line-height: 1.4;
 }
 .footer-links__list a {
   font-size: 15px;
