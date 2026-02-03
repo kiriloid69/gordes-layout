@@ -1,8 +1,8 @@
-// Анимации для кнопок
-button {
+// Анимации для кнопок (кроме footer-links toggle)
+button:not(.footer-links__toggle) {
     position: relative;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     
     &::before {
         content: '';
@@ -21,7 +21,7 @@ button {
             transparent 100%
         );
         transform: skewX(-25deg);
-        transition: left 0.85s ease;
+        transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     }
     
     &:hover {

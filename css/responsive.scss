@@ -29,6 +29,9 @@ $blue-color: #105186;
 
 // Адаптивные стили для устройств 1024px и меньше
 @media (max-width: 1024px) {
+    .footer-links__grid {
+        gap: 30px;
+    }
     // Предотвращение горизонтальной прокрутки
     html,
     body {
@@ -922,6 +925,29 @@ $blue-color: #105186;
         &__item {
             flex: 0 0 calc(33.333% - 11px); // 3 элемента в строке на очень маленьких экранах
             max-width: calc(33.333% - 11px);
+        }
+    }
+
+    .footer-links {
+        padding: 36px 0 44px;
+        &__grid {
+            grid-template-columns: 1fr;
+            gap: 36px 0;
+        }
+        &__column {
+            min-height: auto;
+        }
+        &__title {
+            font-size: 16px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+        }
+        &__list li {
+            margin-bottom: 10px;
+        }
+        &__toggle {
+            margin-top: 14px;
+            padding: 6px 0;
         }
     }
 

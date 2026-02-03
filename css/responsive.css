@@ -20,6 +20,9 @@
   }
 }
 @media (max-width: 1024px) {
+  .footer-links__grid {
+    gap: 30px;
+  }
   html,
   body {
     overflow-x: hidden;
@@ -723,6 +726,28 @@
   .partners__item {
     flex: 0 0 calc(33.333% - 11px);
     max-width: calc(33.333% - 11px);
+  }
+  .footer-links {
+    padding: 36px 0 44px;
+  }
+  .footer-links__grid {
+    grid-template-columns: 1fr;
+    gap: 36px 0;
+  }
+  .footer-links__column {
+    min-height: auto;
+  }
+  .footer-links__title {
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+  }
+  .footer-links__list li {
+    margin-bottom: 10px;
+  }
+  .footer-links__toggle {
+    margin-top: 14px;
+    padding: 6px 0;
   }
   .footer__content {
     flex-direction: column;
