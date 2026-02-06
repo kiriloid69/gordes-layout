@@ -1,8 +1,8 @@
-button:not(.footer-links__toggle) {
+button:not(.footer-links__toggle), button:not(.slider__arrow) {
   overflow: hidden;
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
-button:not(.footer-links__toggle)::before {
+button:not(.footer-links__toggle)::before, button:not(.slider__arrow)::before {
   content: "";
   position: absolute;
   top: 0;
@@ -13,16 +13,10 @@ button:not(.footer-links__toggle)::before {
   transform: skewX(-25deg);
   transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
-button:not(.footer-links__toggle):hover {
-  transform: translateY(-2px);
-}
-button:not(.footer-links__toggle):hover::before {
-  left: 100%;
-}
-button:not(.footer-links__toggle):active {
+button:not(.footer-links__toggle):active, button:not(.slider__arrow):active {
   transform: translateY(0);
 }
-button:not(.footer-links__toggle).yellow-button::before {
+button:not(.footer-links__toggle).yellow-button::before, button:not(.slider__arrow).yellow-button::before {
   background: linear-gradient(90deg, transparent 0%, transparent 30%, rgba(255, 255, 255, 0.45) 45%, rgba(255, 255, 255, 0.45) 55%, transparent 70%, transparent 100%);
 }
 
