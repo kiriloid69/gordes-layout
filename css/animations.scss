@@ -1,6 +1,6 @@
 // Анимации для кнопок (кроме footer-links toggle)
 button:not(.footer-links__toggle) {
-    position: relative;
+    // position: relative;
     overflow: hidden;
     transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     
