@@ -1,9 +1,10 @@
 @charset "UTF-8";
-button:not(.footer-links__toggle), button:not(.slider__arrow) {
+button:not(.footer-links__toggle):not(.slider__arrow) {
+  position: relative;
   overflow: hidden;
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
-button:not(.footer-links__toggle)::before, button:not(.slider__arrow)::before {
+button:not(.footer-links__toggle):not(.slider__arrow)::before {
   content: "";
   position: absolute;
   top: 0;
@@ -11,13 +12,12 @@ button:not(.footer-links__toggle)::before, button:not(.slider__arrow)::before {
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, transparent 0%, transparent 30%, rgba(255, 255, 255, 0.35) 45%, rgba(255, 255, 255, 0.35) 55%, transparent 70%, transparent 100%);
-  transform: skewX(-25deg);
   transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
-button:not(.footer-links__toggle):active, button:not(.slider__arrow):active {
+button:not(.footer-links__toggle):not(.slider__arrow):active {
   transform: translateY(0);
 }
-button:not(.footer-links__toggle).yellow-button::before, button:not(.slider__arrow).yellow-button::before {
+button:not(.footer-links__toggle):not(.slider__arrow).yellow-button::before {
   background: linear-gradient(90deg, transparent 0%, transparent 30%, rgba(255, 255, 255, 0.45) 45%, rgba(255, 255, 255, 0.45) 55%, transparent 70%, transparent 100%);
 }
 
@@ -1642,13 +1642,11 @@ section {
   position: relative;
   margin-top: 80px;
 }
-.footer .container {
-  padding: 60px 0 0;
-}
 .footer__content {
   display: flex;
   justify-content: space-between;
   gap: 40px;
+  padding-top: 40px;
   margin-bottom: 50px;
   padding-bottom: 40px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);

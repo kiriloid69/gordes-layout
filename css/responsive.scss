@@ -955,13 +955,15 @@ $blue-color: #105186;
         &__content {
             flex-direction: column;
             gap: 20px;
+            padding-top: 32px;
+            padding-bottom: 32px;
         }
         &__section {
             &--contacts {
                 max-width: 100%;
             }
             &--nav {
-                flex-direction: row;
+                flex-direction: column;
             }
         }
         &__nav {
@@ -974,8 +976,8 @@ $blue-color: #105186;
             }
         }
         &__bottom {
-            padding-top: 0;
-            padding-bottom: 40px;
+            text-align: left;
+            margin-top: auto;
         }
         &__messengers {
             bottom: 16px;

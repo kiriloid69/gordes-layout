@@ -752,12 +752,14 @@
   .footer__content {
     flex-direction: column;
     gap: 20px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
   .footer__section--contacts {
     max-width: 100%;
   }
   .footer__section--nav {
-    flex-direction: row;
+    flex-direction: column;
   }
   .footer__nav {
     flex-wrap: wrap;
@@ -769,8 +771,8 @@
     font-size: 16px;
   }
   .footer__bottom {
-    padding-top: 0;
-    padding-bottom: 40px;
+    text-align: left;
+    margin-top: auto;
   }
   .footer__messengers {
     bottom: 16px;
