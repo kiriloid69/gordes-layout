@@ -18,6 +18,9 @@
   .nav__item--callback {
     display: none !important;
   }
+  .reviews--mobile-only {
+    display: none !important;
+  }
 }
 @media (max-width: 1024px) {
   .footer-links__grid {
@@ -837,6 +840,12 @@
   }
   .callback-button--menu:active {
     transform: translateY(0);
+  }
+  .reviews--desktop-only {
+    display: none !important;
+  }
+  .reviews--mobile-only {
+    display: block;
   }
   .reviews__slider--desktop {
     display: none;

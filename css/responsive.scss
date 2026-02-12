@@ -25,6 +25,9 @@ $blue-color: #105186;
     .nav__item--callback {
         display: none !important;
     }
+    .reviews--mobile-only {
+        display: none !important;
+    }
 }
 
 // Адаптивные стили для устройств 1024px и меньше
@@ -1057,6 +1060,13 @@ $blue-color: #105186;
         }
     }
 
+    // Блок отзывов: на мобильных показываем копию после «трёх услуг», основной блок скрываем
+    .reviews--desktop-only {
+        display: none !important;
+    }
+    .reviews--mobile-only {
+        display: block;
+    }
     // Переключение слайдеров отзывов на мобильных
     .reviews__slider--desktop {
         display: none;
