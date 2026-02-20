@@ -320,6 +320,9 @@ button.yellow-button {
   align-items: center;
   gap: 20px;
 }
+.contacts__phone i {
+  color: #105186;
+}
 .contacts__phone {
   display: flex;
   align-items: center;
@@ -329,9 +332,6 @@ button.yellow-button {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
-}
-.contacts__phone i {
-  color: #105186;
 }
 
 .burger-menu {
@@ -797,7 +797,7 @@ section {
 .order-specialist__button:hover:not(:disabled) {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  background-color: #0d436f;
+  background-color: rgb(13.28, 67.23, 111.22);
 }
 .order-specialist__button:active:not(:disabled) {
   transform: translateY(0);
@@ -1306,7 +1306,7 @@ section {
   display: inline-block;
 }
 .licenses__link:hover {
-  color: #0b3558;
+  color: rgb(10.56, 53.46, 88.44);
 }
 .licenses__list {
   display: flex;
@@ -1624,7 +1624,7 @@ section {
   flex-shrink: 0;
 }
 .footer-links__toggle:hover {
-  color: #0c3b62;
+  color: rgb(11.648, 58.968, 97.552);
   opacity: 0.9;
 }
 .footer-links__toggle.is-hidden {
@@ -1996,7 +1996,7 @@ section {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .modal__button:hover:not(:disabled) {
-  background-color: #0d436f;
+  background-color: rgb(13.28, 67.23, 111.22);
   transform: translateY(-2px);
 }
 .modal__button:disabled {
@@ -2053,7 +2053,7 @@ section {
   transition: color 0.3s ease;
 }
 .modal__link:hover {
-  color: #0b3558;
+  color: rgb(10.56, 53.46, 88.44);
 }
 
 .contacts-page {
@@ -2233,7 +2233,7 @@ section {
   transition: color 0.3s ease;
 }
 .about-company__item a:hover {
-  color: #0b3558;
+  color: rgb(10.56, 53.46, 88.44);
 }
 .about-company__team {
   display: flex;

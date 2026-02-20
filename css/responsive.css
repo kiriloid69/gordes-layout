@@ -509,7 +509,7 @@
     transform: translateY(-7.5px) rotate(-45deg);
   }
   .burger-menu:hover .burger-menu__line {
-    background-color: #0b3558;
+    background-color: rgb(10.56, 53.46, 88.44);
   }
   .menu-overlay {
     position: fixed;
@@ -835,7 +835,7 @@
     transition: background-color 0.3s ease, transform 0.2s ease;
   }
   .callback-button--menu:hover {
-    background-color: #0d436f;
+    background-color: rgb(13.28, 67.23, 111.22);
     transform: translateY(-1px);
   }
   .callback-button--menu:active {
