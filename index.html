@@ -1121,7 +1121,7 @@
                 <!-- Виджет отзывов от MyReviews ПК версия -->
 
                 <div id="myReviews-desktop-placeholder" style="display: flex; justify-content: center; margin-top: 20px; border-radius: 20px">
-                    <iframe title="Виджет с отзывами «Карусель» от MyReviews" style="width: 100%; height: 100%; max-width: 1170px; border: none; outline: none; padding: 0; margin: 0" id="myReviews__block-widget"> </iframe>
+                    <iframe title="Виджет с отзывами от MyReviews" style="width: 100%; height: 100%; max-width: 1170px; border: none; outline: none; padding: 0; margin: 0" id="myReviews__block-widget"> </iframe>
                 </div>
                 <script src="https://myreviews.dev/widget/dist/index.js" defer></script>
                 <script>
@@ -1131,6 +1131,21 @@
                         var desktopPlaceholder = null;
                         var mobilePlaceholder = null;
                         var widgetInitialized = false;
+
+                        // Санкт-Петербург
+                        var isPetersburg = /xn----jtbi1ahbal8g\.xn--p1ai$/.test(location.hostname)
+
+                        var widgetConfig = isPetersburg
+                            ? { uuid: "93342981-bc8c-4e77-9aeb-8d564f974675", name: "g15240175", additionalFrame: "none", lang: "ru", widgetId: "2" }
+                            : { uuid: "c799eefd-0375-4f8a-a22f-de08f2bff677", name: "g95610753", additionalFrame: "none", lang: "ru", widgetId: "1" };
+
+                        var placeholderStyle = isPetersburg
+                            ? "height: calc(100vh - 127px); display: flex; justify-content: center; margin-top: 20px; border-radius: 20px"
+                            : "display: flex; justify-content: center; margin-top: 20px; border-radius: 20px";
+
+                        var iframeStyle = isPetersburg
+                            ? "max-width: 1180px; width: 100%; height: 100%; border: none; outline: none; padding: 0; margin: 0"
+                            : "width: 100%; height: 100%; max-width: 1170px; border: none; outline: none; padding: 0; margin: 0";
 
                         function moveWidget() {
                             if (!iframe || !desktopPlaceholder || !mobilePlaceholder) return;
@@ -1142,28 +1157,31 @@
                             }
                         }
 
+                        function applyStyles() {
+                            if (!desktopPlaceholder || !mobilePlaceholder || !iframe) return;
+                            desktopPlaceholder.setAttribute("style", placeholderStyle);
+                            mobilePlaceholder.setAttribute("style", placeholderStyle);
+                            iframe.setAttribute("style", iframeStyle);
+                            iframe.setAttribute("title", isPetersburg ? "Виджет с отзывами «На всю страницу» от MyReviews" : "Виджет с отзывами «Карусель» от MyReviews");
+                        }
+
                         function initWidget() {
                             if (widgetInitialized || !window.myReviews || !window.myReviews.BlockWallWidget) return;
                             widgetInitialized = true;
-                            new window.myReviews.BlockWallWidget({
-                                uuid: "c799eefd-0375-4f8a-a22f-de08f2bff677",
-                                name: "g95610753",
-                                additionalFrame:"none",
-                                lang:"ru",
-                                widgetId: "1"
-                            }).init();
+                            new window.myReviews.BlockWallWidget(widgetConfig).init();
                         }
 
                         function setup() {
-                            iframe = document.getElementById('myReviews__block-widget');
-                            desktopPlaceholder = document.getElementById('myReviews-desktop-placeholder');
-                            mobilePlaceholder = document.getElementById('myReviews-mobile-placeholder');
+                            iframe = document.getElementById("myReviews__block-widget");
+                            desktopPlaceholder = document.getElementById("myReviews-desktop-placeholder");
+                            mobilePlaceholder = document.getElementById("myReviews-mobile-placeholder");
+                            applyStyles();
                             moveWidget();
                             initWidget();
                         }
 
                         if (document.readyState === "loading") {
-                            document.addEventListener('DOMContentLoaded', setup);
+                            document.addEventListener("DOMContentLoaded", setup);
                         } else {
                             setup();
                         }
@@ -1173,7 +1191,7 @@
                             clearTimeout(resizeTimer);
                             resizeTimer = setTimeout(moveWidget, 100);
                         });
-                    })()
+                    })();
                 </script>
 
                 <!-- / Виджет отзывов от MyReviews ПК версия -->
