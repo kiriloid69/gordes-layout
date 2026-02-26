@@ -1,10 +1,10 @@
 @charset "UTF-8";
-button:not(.footer-links__toggle):not(.slider__arrow) {
+button:not(.footer-links__toggle):not(.slider__arrow):not(.modal__close) {
   position: relative;
   overflow: hidden;
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
-button:not(.footer-links__toggle):not(.slider__arrow)::before {
+button:not(.footer-links__toggle):not(.slider__arrow):not(.modal__close)::before {
   content: "";
   position: absolute;
   top: 0;
@@ -14,10 +14,10 @@ button:not(.footer-links__toggle):not(.slider__arrow)::before {
   background: linear-gradient(90deg, transparent 0%, transparent 30%, rgba(255, 255, 255, 0.35) 45%, rgba(255, 255, 255, 0.35) 55%, transparent 70%, transparent 100%);
   transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
-button:not(.footer-links__toggle):not(.slider__arrow):active {
+button:not(.footer-links__toggle):not(.slider__arrow):not(.modal__close):active {
   transform: translateY(0);
 }
-button:not(.footer-links__toggle):not(.slider__arrow).yellow-button::before {
+button:not(.footer-links__toggle):not(.slider__arrow):not(.modal__close).yellow-button::before {
   background: linear-gradient(90deg, transparent 0%, transparent 30%, rgba(255, 255, 255, 0.45) 45%, rgba(255, 255, 255, 0.45) 55%, transparent 70%, transparent 100%);
 }
 
@@ -705,6 +705,137 @@ section {
   color: #151515;
   margin: 0;
   max-width: 240px;
+}
+
+.convenience {
+  padding: 20px 0 100px;
+  background-color: #f5f5f5;
+}
+.convenience__card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1170px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+.convenience__column {
+  flex: 1 1 300px;
+  min-width: 0;
+}
+.convenience__docs-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+.convenience__emblem {
+  width: 100px;
+  height: auto;
+  flex-shrink: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.convenience__emblem--mobile {
+  display: none;
+}
+.convenience__docs-content {
+  flex: 1;
+  min-width: 0;
+}
+.convenience__subtitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #151515;
+  margin: 0 0 16px 0;
+  line-height: 1.15;
+}
+.convenience__column--docs .convenience__subtitle {
+  margin-bottom: 16px;
+}
+.convenience__list {
+  padding: 12px 0 0 0;
+  list-style: none;
+  margin: 0;
+}
+.convenience__list-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #151515;
+  margin-bottom: 12px;
+}
+.convenience__list-item:last-child {
+  margin-bottom: 0;
+}
+.convenience__check {
+  color: #105186;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+.convenience__column--platforms .convenience__subtitle {
+  margin-bottom: 24px;
+}
+.convenience__logos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px 16px;
+  align-items: center;
+  justify-items: start;
+  margin-bottom: 24px;
+}
+.convenience__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+  color: #151515;
+}
+.convenience__logo:hover {
+  opacity: 0.85;
+}
+.convenience__logo img {
+  height: 28px;
+  width: auto;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+}
+.convenience__logo-text {
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+.convenience__logo-text--small {
+  font-size: 11px;
+}
+.convenience__tender-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #105186;
+  background-color: #ffffff;
+  border: 2px solid #105186;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+.convenience__tender-btn:hover {
+  background-color: #105186;
+  color: #ffffff;
+  transform: translateY(-1px);
 }
 
 .order-specialist {

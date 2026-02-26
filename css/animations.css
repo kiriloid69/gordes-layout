@@ -1,9 +1,9 @@
-button:not(.footer-links__toggle):not(.slider__arrow) {
+button:not(.footer-links__toggle):not(.slider__arrow):not(.modal__close) {
   position: relative;
   overflow: hidden;
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
-button:not(.footer-links__toggle):not(.slider__arrow)::before {
+button:not(.footer-links__toggle):not(.slider__arrow):not(.modal__close)::before {
   content: "";
   position: absolute;
   top: 0;
@@ -13,10 +13,10 @@ button:not(.footer-links__toggle):not(.slider__arrow)::before {
   background: linear-gradient(90deg, transparent 0%, transparent 30%, rgba(255, 255, 255, 0.35) 45%, rgba(255, 255, 255, 0.35) 55%, transparent 70%, transparent 100%);
   transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
-button:not(.footer-links__toggle):not(.slider__arrow):active {
+button:not(.footer-links__toggle):not(.slider__arrow):not(.modal__close):active {
   transform: translateY(0);
 }
-button:not(.footer-links__toggle):not(.slider__arrow).yellow-button::before {
+button:not(.footer-links__toggle):not(.slider__arrow):not(.modal__close).yellow-button::before {
   background: linear-gradient(90deg, transparent 0%, transparent 30%, rgba(255, 255, 255, 0.45) 45%, rgba(255, 255, 255, 0.45) 55%, transparent 70%, transparent 100%);
 }
 

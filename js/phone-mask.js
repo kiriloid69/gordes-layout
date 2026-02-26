@@ -6,29 +6,47 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.order-specialist__form');
     const consentCheckbox = document.querySelector('.order-specialist__checkbox');
     
-    // Модальная форма
+    // Модальная форма (оставить заявку)
+    const orderModalEl = document.getElementById('orderModal');
     const modalPhoneInput = document.getElementById('modalPhone');
     const modalNameInput = document.getElementById('modalName');
-    const modalSubmitButton = document.querySelector('.modal__button');
-    const modalForm = document.querySelector('.modal__form');
-    const modalConsentCheckbox = document.querySelector('.modal__checkbox');
-    
+    const modalSubmitButton = orderModalEl ? orderModalEl.querySelector('.modal__button') : null;
+    const modalForm = orderModalEl ? orderModalEl.querySelector('.modal__form') : null;
+    const modalConsentCheckbox = orderModalEl ? orderModalEl.querySelector('.modal__checkbox') : null;
+
     // Применяем маску к основной форме
     if (phoneInput && nameInput && submitButton) {
         initPhoneMask(phoneInput, nameInput, submitButton, form, consentCheckbox);
     }
-    
-    // Применяем маску к модальной форме
+
+    // Применяем маску к модальной форме (оставить заявку)
     if (modalPhoneInput && modalNameInput && modalSubmitButton) {
         initPhoneMask(modalPhoneInput, modalNameInput, modalSubmitButton, modalForm, modalConsentCheckbox);
     }
-    
+
+    // Маска телефона для попапа «Пригласить на тендер» — та же маска, без поля имени (nameInput = null)
+    var tenderPhoneInput = document.getElementById('tenderPhone');
+    var tenderForm = document.getElementById('tenderForm');
+    var tenderSubmitButton = tenderForm ? tenderForm.querySelector('.modal__button') : null;
+    var tenderConsentCheckbox = tenderForm ? tenderForm.querySelector('.modal__checkbox') : null;
+    if (tenderPhoneInput && tenderSubmitButton && tenderForm) {
+        initPhoneMask(tenderPhoneInput, null, tenderSubmitButton, tenderForm, tenderConsentCheckbox);
+    }
+
     function initPhoneMask(phoneInput, nameInput, submitButton, form, consentCheckbox) {
-        if (!phoneInput || !nameInput || !submitButton) return;
+        if (!phoneInput || !submitButton) return;
         
         const placeholder = 'Введите ваш телефон';
         const phonePrefix = '+7 (';
-        
+        let previousValue = phonePrefix;
+
+        function getDigits(str) {
+            let d = str.replace(/\D/g, '');
+            if (d.startsWith('7')) d = d.substring(1);
+            else if (d.startsWith('8')) d = d.substring(1);
+            return d.substring(0, 10);
+        }
+
         function formatPhone(value) {
             // Удаляем все нецифровые символы
             let digits = value.replace(/\D/g, '');
@@ -76,6 +94,9 @@ document.addEventListener('DOMContentLoaded', function() {
         phoneInput.addEventListener('focus', function() {
             if (this.value === '' || this.value === placeholder) {
                 this.value = phonePrefix;
+                previousValue = phonePrefix;
+            } else {
+                previousValue = this.value;
             }
         });
         
@@ -85,56 +106,53 @@ document.addEventListener('DOMContentLoaded', function() {
             if (value.length === 0 || value === '7') {
                 this.value = '';
                 this.placeholder = placeholder;
+                previousValue = phonePrefix;
             }
         });
         
         // Обработка ввода
         phoneInput.addEventListener('input', function(e) {
             const cursorPosition = this.selectionStart;
-            const oldValue = this.value;
-            
+            const currentRaw = this.value;
+
             // Если пользователь пытается удалить префикс +7 (, предотвращаем это
-            if (this.value.length < phonePrefix.length && !this.value.startsWith(phonePrefix)) {
+            if (currentRaw.length < phonePrefix.length && !currentRaw.startsWith(phonePrefix)) {
                 this.value = phonePrefix;
+                previousValue = phonePrefix;
                 this.setSelectionRange(phonePrefix.length, phonePrefix.length);
                 return;
             }
-            
-            // Получаем только цифры
-            let digits = this.value.replace(/\D/g, '');
-            
-            // Убираем первую 7 если есть
-            if (digits.startsWith('7')) {
-                digits = digits.substring(1);
-            } else if (digits.startsWith('8')) {
-                digits = digits.substring(1);
+
+            let digits = getDigits(currentRaw);
+            const oldDigits = getDigits(previousValue);
+
+            // Пользователь стёр нецифровой символ (скобку, пробел, дефис) — считаем как удаление последней цифры
+            var deletedFormatting = currentRaw.length < previousValue.length && digits.length === oldDigits.length;
+            if (deletedFormatting) {
+                digits = digits.substring(0, digits.length - 1);
             }
-            
-            // Ограничиваем до 10 цифр
-            digits = digits.substring(0, 10);
-            
-            // Форматируем
+
             const formatted = formatPhone(digits);
             this.value = formatted;
-            
-            // Восстанавливаем позицию курсора
-            let newCursorPosition = cursorPosition;
-            const oldLength = oldValue.length;
-            const newLength = formatted.length;
-            
-            if (oldLength < newLength) {
-                // Добавлен символ
-                newCursorPosition = cursorPosition + (newLength - oldLength);
-            } else if (oldLength > newLength) {
-                // Удален символ
-                newCursorPosition = Math.max(phonePrefix.length, cursorPosition - (oldLength - newLength));
+            previousValue = formatted;
+
+            // Позиция курсора: при удалении скобки/пробела/дефиса ставим в конец; иначе — по длине до/после
+            var newCursorPosition;
+            var newLength = formatted.length;
+            if (deletedFormatting) {
+                newCursorPosition = newLength;
+            } else {
+                var oldLength = currentRaw.length;
+                if (oldLength < newLength) {
+                    newCursorPosition = cursorPosition + (newLength - oldLength);
+                } else if (oldLength > newLength) {
+                    newCursorPosition = Math.max(phonePrefix.length, cursorPosition - (oldLength - newLength));
+                } else {
+                    newCursorPosition = cursorPosition;
+                }
+                newCursorPosition = Math.max(phonePrefix.length, Math.min(newLength, newCursorPosition));
             }
-            
-            // Убеждаемся, что курсор не попадает в префикс
-            if (newCursorPosition < phonePrefix.length) {
-                newCursorPosition = phonePrefix.length;
-            }
-            
+
             this.setSelectionRange(newCursorPosition, newCursorPosition);
             
             // Проверяем валидность формы
@@ -162,12 +180,12 @@ document.addEventListener('DOMContentLoaded', function() {
         function checkFormValidity() {
             const phoneValue = phoneInput.value.replace(/\D/g, '');
             const phoneDigits = phoneValue.startsWith('7') ? phoneValue.substring(1) : phoneValue;
-            const nameValue = nameInput.value.trim();
+            const nameValue = nameInput ? nameInput.value.trim() : '';
             const isConsentChecked = consentCheckbox ? consentCheckbox.checked : true;
-            
+
             const isPhoneValid = phoneDigits.length === 10;
-            const isNameValid = nameValue.length > 0;
-            
+            const isNameValid = nameInput ? nameValue.length > 0 : true;
+
             if (isPhoneValid && isNameValid && isConsentChecked) {
                 submitButton.disabled = false;
                 submitButton.style.opacity = '1';
@@ -179,10 +197,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
-        // Проверка при вводе имени
-        nameInput.addEventListener('input', function() {
-            checkFormValidity();
-        });
+        // Проверка при вводе имени (только если есть поле имени)
+        if (nameInput) {
+            nameInput.addEventListener('input', function() {
+                checkFormValidity();
+            });
+        }
         
         // Проверка при изменении чекбокса политики
         if (consentCheckbox) {
@@ -199,10 +219,10 @@ document.addEventListener('DOMContentLoaded', function() {
             form.addEventListener('submit', function(e) {
                 const phoneValue = phoneInput.value.replace(/\D/g, '');
                 const phoneDigits = phoneValue.startsWith('7') ? phoneValue.substring(1) : phoneValue;
-                const nameValue = nameInput.value.trim();
+                const nameValue = nameInput ? nameInput.value.trim() : '';
                 const isConsentChecked = consentCheckbox ? consentCheckbox.checked : true;
-                
-                if (phoneDigits.length !== 10 || nameValue.length === 0 || !isConsentChecked) {
+
+                if (phoneDigits.length !== 10 || (nameInput && nameValue.length === 0) || !isConsentChecked) {
                     e.preventDefault();
                     return false;
                 }

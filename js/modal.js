@@ -122,5 +122,47 @@ document.addEventListener('DOMContentLoaded', function() {
             closeModal();
         });
     }
+
+    // Модальное окно «Пригласить на тендер»
+    var tenderModal = document.getElementById('tenderModal');
+    if (tenderModal) {
+        var tenderClose = tenderModal.querySelector('.tender-modal-close');
+        var tenderForm = document.getElementById('tenderForm');
+        var tenderPhoneInput = document.getElementById('tenderPhone');
+
+        function openTenderModal() {
+            tenderModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            setTimeout(function() {
+                if (tenderPhoneInput) tenderPhoneInput.focus();
+            }, 300);
+        }
+        function closeTenderModal() {
+            tenderModal.classList.remove('active');
+            document.body.style.overflow = '';
+            if (tenderForm) tenderForm.reset();
+        }
+
+        document.querySelectorAll('.tender-modal-open').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                openTenderModal();
+            });
+        });
+        if (tenderClose) tenderClose.addEventListener('click', closeTenderModal);
+        tenderModal.addEventListener('click', function(e) {
+            if (e.target === tenderModal) closeTenderModal();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && tenderModal.classList.contains('active')) closeTenderModal();
+        });
+        if (tenderForm) {
+            tenderForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Спасибо! Ваша заявка принята. Наш специалист свяжется с вами в ближайшее время.');
+                closeTenderModal();
+            });
+        }
+    }
 });
 

@@ -1,5 +1,5 @@
-// Анимации для кнопок (кроме footer-links__toggle и slider__arrow)
-button:not(.footer-links__toggle):not(.slider__arrow) {
+// Анимации для кнопок (кроме footer-links__toggle, slider__arrow и modal__close)
+button:not(.footer-links__toggle):not(.slider__arrow):not(.modal__close) {
     position: relative;
     overflow: hidden;
     transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
